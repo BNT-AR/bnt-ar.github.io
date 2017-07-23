@@ -9,6 +9,8 @@ import Stack from '../../components/Stack'
 import Team from '../../components/Team'
 import AkcLogo from './assets/akc-logo.svg'
 import BirthCertLogo from './assets/birthcertificate-logo.svg'
+import AwsLogo from './assets/aws.svg'
+import CloudImage from './assets/cloud.jpg'
 
 class Home extends Component {
   render () {
@@ -56,6 +58,22 @@ class Home extends Component {
                 Companies move fast and need robust steps. We join <em>Birth Certificate Online ® </em>
                 to handle structural decisions with the ability to mute when needed.
                 Your time is the most valuable, we know that.
+              </p>
+            </div>
+          )}
+        />
+        <Story
+          layout={'left'}
+          image={CloudImage}
+          content={(
+            <div>
+              <h1>We cloud the App and it just works</h1>
+              <img src={AwsLogo} alt='Amazon AWS' />
+              <p>
+                When your site is launched, the tools used to keep it running are essential to have 99.95% availability.
+                It's not only about Virtual Servers, but also Node Balancers, DNS, CDN, Transcoding Tools, Database
+                Mirroring, and more fancy words that will keep your things running.
+                We have wide experience with Amazon AWS, Digital Ocean and Linode.
               </p>
             </div>
           )}
