@@ -19,6 +19,10 @@ import SassLogo from './assets/sass.svg'
 import Css3Logo from './assets/css3.svg'
 import AwsLogo from './assets/aws.svg'
 import LinuxLogo from './assets/tux.svg'
+import MysqlLogo from './assets/mysql.svg'
+import PerconaLogo from './assets/percona.svg'
+import MongoDbLogo from './assets/mongodb.svg'
+import SqliteLogo from './assets/sqlite.svg'
 
 class Stack extends Component {
   render () {
@@ -48,6 +52,10 @@ class Stack extends Component {
               <li><Logo image={SassLogo} title={'Sass / Scss'} /></li>
               <li><Logo image={Css3Logo} title={'CSS3'} /></li>
               <li><Logo image={StyledCompLogo} title={'Styled Components'} /></li>
+              <li><Logo image={MysqlLogo} title={'MySQL'} /></li>
+              <li><Logo image={PerconaLogo} title={'Percona'} /></li>
+              <li><Logo image={MongoDbLogo} title={'MongoDB'} /></li>
+              <li><Logo image={SqliteLogo} title={'SQLite'} /></li>
             </ul>
           </div>
         </Content>
