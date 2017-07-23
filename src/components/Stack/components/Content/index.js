@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export default styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // left: 0;
+  // width: 100%;
 
   > div {
     max-width: 1000px;
