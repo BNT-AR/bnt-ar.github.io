@@ -24,7 +24,7 @@ class Stack extends Component {
               <li>
                 <Member
                   image={GBrunacci}
-                  name={'Gabriel'}
+                  name={'Gabriel Brunacci'}
                   title={'Founder & Director'}
                   description={'Programming jewel turned into CEO'}
                   linkedIn={'https://www.linkedin.com/in/gabrielbrunacci/'}
@@ -33,7 +33,7 @@ class Stack extends Component {
               <li>
                 <Member
                   image={MBilbao}
-                  name={'Martín'}
+                  name={'Martín Bilbao'}
                   title={'Software Engineer Hero'}
                   description={'Algorithms in his blood'}
                   linkedIn={'https://www.linkedin.com/in/martin-bilbao-51a5b31b/'}
@@ -42,7 +42,7 @@ class Stack extends Component {
               <li>
                 <Member
                   image={EMateu}
-                  name={'Emiliano'}
+                  name={'Emiliano Mateu'}
                   title={'Cutting Edge Front-end'}
                   description={'He loves Laravel too'}
                   linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
@@ -51,7 +51,7 @@ class Stack extends Component {
               <li>
                 <Member
                   image={JCtkc}
-                  name={'Juan Sette'}
+                  name={'Juan Settecase'}
                   title={'Grandmaster Laravel'}
                   description={'The Bug Slayer'}
                   linkedIn={'https://www.linkedin.com/in/juan-ignacio-settecase/'}
