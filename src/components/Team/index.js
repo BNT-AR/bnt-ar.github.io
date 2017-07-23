@@ -43,7 +43,7 @@ class Stack extends Component {
                 <Member
                   image={EMateu}
                   name={'Emiliano'}
-                  title={'Cutting Edge Frontend'}
+                  title={'Cutting Edge Front-end'}
                   description={'He loves Laravel too'}
                   linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
                 />
