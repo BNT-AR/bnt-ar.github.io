@@ -1,11 +1,13 @@
 {
   "name": "bravenewtech",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "polished": "^1.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "styled-components": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
