@@ -10,7 +10,7 @@ export default styled.div`
     right: 0;
   `}
 
-  top: 44%;
+  top: 50%;
   transform: translateY(-50%);
   width: 50%;
   ${props => (props.layout === 'right') && `
