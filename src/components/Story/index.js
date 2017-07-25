@@ -6,7 +6,7 @@ import Content from './components/Content'
 class Story extends Component {
   render () {
     return (
-      <Wrapper>
+      <Wrapper id={this.props.id}>
         <Picture
           imageUrl={this.props.image}
           layout={this.props.layout}

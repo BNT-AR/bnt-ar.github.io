@@ -12,7 +12,7 @@ import JDans from './assets/jdans.jpg'
 class Stack extends Component {
   render () {
     return (
-      <Wrapper>
+      <Wrapper id={'team'}>
         <Content>
           <div>
             <h1>We are a full stack team</h1>

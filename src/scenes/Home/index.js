@@ -33,6 +33,7 @@ class Home extends Component {
           `}
         />
         <Story
+          id={'about'}
           layout={'left'}
           image={'https://www.dtelepathy.com/images/work/quip/homepage-feature.584410d34edbd3bf.jpg'}
           content={(

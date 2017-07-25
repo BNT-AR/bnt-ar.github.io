@@ -7,6 +7,6 @@ export default styled.div`
   font-size: 16px;
   font-weight: 400;
   > div {
-    margin: 5px 0;
+    margin: 20px 0;
   }
 `
