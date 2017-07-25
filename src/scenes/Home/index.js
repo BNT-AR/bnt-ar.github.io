@@ -40,7 +40,7 @@ class Home extends Component {
           content={(
             <div>
               <h1>We scale startup minded apps</h1>
-              <img src={LaravelLogo} alt='AKC Logo' />
+              <img src={LaravelLogo} alt='' />
               <p>
                 We have been working with companies all over the world in their apps since they started.
                 Some of them now handles million of users a month, high traffic load and online transactions.
@@ -55,10 +55,10 @@ class Home extends Component {
           content={(
             <div>
               <h1>We move fast and achieve goals</h1>
-              <img src={ReactLogo} alt='BirthCertificateOnline Logo' />
+              <img src={ReactLogo} alt='' />
               <p>
-                Companies move fast and need robust steps. We join <em>Birth Certificate Online ® </em>
-                to handle structural decisions with the ability to mute when needed.
+                Companies move fast and need robust steps. We have the expertise of
+                handling structural decisions with the ability to mutate when needed.
                 Your time is the most valuable, we know that.
               </p>
             </div>
