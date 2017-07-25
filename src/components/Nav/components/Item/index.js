@@ -23,13 +23,13 @@ export default styled(Item)`
   cursor: pointer;
   text-decoration: none;
   transition: box-shadow 200ms linear, border-color 200ms linear;
+  outline: 0;
   ${props => props.bordered && `
     margin: 0 0 0 1.2em;
   `}
   
   &:hover,
   &:focus {
-    outline: 0;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.6);
   }

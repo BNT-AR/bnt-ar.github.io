@@ -35,8 +35,18 @@ export default styled.div`
     position: absolute;
     width: 30px;
     height: 30px;
-    left: calc(50% - 30px);
+    left: calc(50% - 50px);
     bottom: 30px;
     transform: rotate(90deg);
+    border-radius: 100%;
+    cursor: pointer;
+    padding: 10px;
+    transition: box-shadow 200ms linear;
+    outline: 0;
+    
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
   }
 `

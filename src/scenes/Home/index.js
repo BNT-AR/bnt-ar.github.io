@@ -31,6 +31,7 @@ class Home extends Component {
             We bring practical and scalable solutions to turn new ideas into real products that mean business.
             Explore our approach and process to make apps comes true.
           `}
+          arrowToId={'about'}
         />
         <Story
           id={'about'}
