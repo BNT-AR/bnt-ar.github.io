@@ -8,7 +8,7 @@ export default styled.div`
   h1 {
     color: #fff;
     font-family: 'Open Sans',' Helvetica Neue', Arial, sans-serif;
-    font-size: 96px;
+    font-size: 72px;
     font-weight: 400;
     text-align: center;
     line-height: 1.3;
