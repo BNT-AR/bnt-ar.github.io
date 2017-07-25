@@ -7,7 +7,7 @@ export default styled.div`
   
   h1 {
     color: #fff;
-    font-family: 'Linden Hill', serif;
+    font-family: 'Open Sans',' Helvetica Neue', Arial, sans-serif;
     font-size: 96px;
     font-weight: 400;
     text-align: center;
@@ -17,7 +17,7 @@ export default styled.div`
   
   p {
     color: #fff;
-    font: 400 18px/1.5 'Open Sans', sans-serif;
+    font: 400 18px/1.5 'Open Sans',' Helvetica Neue', Arial, sans-serif;
     text-align: center;
     max-width: 960px;
     margin: 30px auto 0;

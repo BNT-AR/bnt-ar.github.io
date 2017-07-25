@@ -17,7 +17,7 @@ export default styled.div`
   h1 {
     position: relative;
     color: #000;
-    font-family: 'Linden Hill', serif;
+    font-family: 'Open Sans',' Helvetica Neue', Arial, sans-serif;
     font-size: 64px;
     font-weight: 400;
     line-height: 1.3;
@@ -35,7 +35,7 @@ export default styled.div`
   }
   
   p {
-    font: 400 18px/2 'Open Sans', sans-serif;
+    font: 400 18px/2 'Open Sans',' Helvetica Neue', Arial, sans-serif;
   }
   
   img {

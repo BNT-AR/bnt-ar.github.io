@@ -44,7 +44,7 @@ class Stack extends Component {
                   image={EMateu}
                   name={'Emiliano Mateu'}
                   title={'Cutting Edge Front-end'}
-                  description={'He loves Laravel too'}
+                  description={'He loves backend too'}
                   linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
                 />
               </li>
@@ -62,7 +62,7 @@ class Stack extends Component {
                   image={JDans}
                   name={'Juan Dans'}
                   title={'React.js Rockstar'}
-                  description={'This guy used to code Java™ too'}
+                  description={'Office greatest Shazam'}
                   linkedIn={'https://www.linkedin.com/in/juan-bautista-dans-29a36ab4/'}
                 />
               </li>

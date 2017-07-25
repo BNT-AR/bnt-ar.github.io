@@ -13,6 +13,7 @@ export default styled(Logo)`
   color: #fff;
   font: 700 24px/1 'Merriweather', serif;
   text-align: center;
+  letter-spacing: 1px;
   span {
     display: block;
     font-size: 22px;

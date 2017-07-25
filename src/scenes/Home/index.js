@@ -7,8 +7,8 @@ import Hero from '../../components/Hero'
 import Story from '../../components/Story'
 import Stack from '../../components/Stack'
 import Team from '../../components/Team'
-import AkcLogo from './assets/akc-logo.svg'
-import BirthCertLogo from './assets/birthcertificate-logo.svg'
+import LaravelLogo from './assets/laravel-logo.svg'
+import ReactLogo from './assets/react-logo.svg'
 import AwsLogo from './assets/aws.svg'
 import CloudImage from './assets/cloud.jpg'
 
@@ -23,13 +23,13 @@ class Home extends Component {
         <Hero
           title={(
             <span>
-              Software development
-              <br />for people like you
+              We do web & mobile apps
+              <br />for startups like yours.
             </span>
           )}
           legend={`
-            We deliver meaningful and lasting results for our clients by improving the experience of their users.
-            Learn more about our unique approach to services and broad portfolio of work.
+            We bring practical and scalable solutions to turn new ideas into real products that mean business.
+            Explore our approach and process to make apps comes true.
           `}
         />
         <Story
@@ -37,11 +37,11 @@ class Home extends Component {
           image={'https://www.dtelepathy.com/images/work/quip/homepage-feature.584410d34edbd3bf.jpg'}
           content={(
             <div>
-              <h1>We scale dev easy for startups</h1>
-              <img src={AkcLogo} alt='AKC Logo' />
+              <h1>We scale startup minded apps</h1>
+              <img src={LaravelLogo} alt='AKC Logo' />
               <p>
-                We have been working with <em>American Kennel Club ® </em> in their online Marketplace since they started.
-                Now it handles +30000 users and high traffic load with online transactions.
+                We have been working with companies all over the world in their apps since they started.
+                Some of them now handles million of users a month, high traffic load and online transactions.
                 Yes, they chose custom software built on standards.
               </p>
             </div>
@@ -53,7 +53,7 @@ class Home extends Component {
           content={(
             <div>
               <h1>We move fast and achieve goals</h1>
-              <img src={BirthCertLogo} alt='BirthCertificateOnline Logo' />
+              <img src={ReactLogo} alt='BirthCertificateOnline Logo' />
               <p>
                 Companies move fast and need robust steps. We join <em>Birth Certificate Online ® </em>
                 to handle structural decisions with the ability to mute when needed.
