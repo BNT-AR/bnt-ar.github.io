@@ -38,24 +38,16 @@ class Stack extends Component {
             <ul>
               <li><Logo image={LaravelLogo} title={'Laravel'} /></li>
               <li><Logo image={ReactLogo} title={'React & Native'} /></li>
-              <li><Logo image={ReduxLogo} title={'Redux'} /></li>
               <li><Logo image={AngularLogo} title={'Angular'} /></li>
               <li><Logo image={Vuejs} title={'Vue.js'} /></li>
               <li><Logo image={AwsLogo} title={'AWS'} /></li>
               <li><Logo image={NginxLogo} title={'Nginx'} /></li>
-              <li><Logo image={GitLogo} title={'Git'} /></li>
               <li><Logo image={PhpLogo} title={'PHP'} /></li>
-              <li><Logo image={SymfonyLogo} title={'Symfony'} /></li>
               <li><Logo image={JsLogo} title={'JavaScript'} /></li>
               <li><Logo image={NodeJsLogo} title={'Node.js'} /></li>
-              <li><Logo image={LinuxLogo} title={'GNU/Linux'} /></li>
-              <li><Logo image={SassLogo} title={'Sass / Scss'} /></li>
               <li><Logo image={Css3Logo} title={'CSS3'} /></li>
-              <li><Logo image={StyledCompLogo} title={'Styled Components'} /></li>
               <li><Logo image={MysqlLogo} title={'MySQL'} /></li>
-              <li><Logo image={PerconaLogo} title={'Percona'} /></li>
               <li><Logo image={MongoDbLogo} title={'MongoDB'} /></li>
-              <li><Logo image={SqliteLogo} title={'SQLite'} /></li>
             </ul>
           </div>
         </Content>
