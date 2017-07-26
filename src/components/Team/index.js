@@ -26,7 +26,7 @@ class Stack extends Component {
                 <Member
                   image={BNT}
                   name={'Brave New Technology'}
-                  title={'Practical and scalable solutions'}
+                  title={'Practical & Scalable Solutions'}
                   description={'Make apps comes true'}
                   linkedIn={'https://www.linkedin.com/company-beta/24781853/'}
                 />
