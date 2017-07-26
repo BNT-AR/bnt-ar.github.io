@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 
 export default styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-
   > div {
     max-width: 1000px;
     margin: 0 auto;
@@ -36,24 +30,5 @@ export default styled.div`
   
   p {
     font: 400 18px/2 'Open Sans',' Helvetica Neue', Arial, sans-serif;
-  }
-  
-  img {
-    display: block;
-    width: auto;
-    height: 100px;
-    margin: 0 auto;
-  }
-  
-  ul {
-    list-style: none;
-    margin: 30px 0;
-    padding: 0;
-  }
-  
-  li {
-    display: inline-block;
-    width: 30%;
-    margin: 30px 0;
   }
 `

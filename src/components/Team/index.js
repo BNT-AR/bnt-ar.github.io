@@ -3,6 +3,7 @@ import Wrapper from './components/Wrapper'
 import Content from './components/Content'
 import Member from './components/Member'
 
+import BNT from './assets/bnt.jpg'
 import GBrunacci from './assets/gbrunacci.jpg'
 import MBilbao from './assets/mbilbao.jpg'
 import EMateu from './assets/emateu.jpg'
@@ -20,8 +21,17 @@ class Stack extends Component {
               We know about trust and synergic, those are key values to success.
             </p>
 
-            <ul>
-              <li>
+            <div className='pure-g'>
+              <div className='pure-u-1-3'>
+                <Member
+                  image={BNT}
+                  name={'Brave New Technology'}
+                  title={'Practical and scalable solutions'}
+                  description={'Make apps comes true'}
+                  linkedIn={'https://www.linkedin.com/company-beta/24781853/'}
+                />
+              </div>
+              <div className='pure-u-1-3'>
                 <Member
                   image={GBrunacci}
                   name={'Gabriel Brunacci'}
@@ -29,8 +39,8 @@ class Stack extends Component {
                   description={'Programming jewel turned into CEO'}
                   linkedIn={'https://www.linkedin.com/in/gabrielbrunacci/'}
                 />
-              </li>
-              <li>
+              </div>
+              <div className='pure-u-1-3'>
                 <Member
                   image={MBilbao}
                   name={'Martín Bilbao'}
@@ -38,8 +48,8 @@ class Stack extends Component {
                   description={'Algorithms in his blood'}
                   linkedIn={'https://www.linkedin.com/in/martin-bilbao-51a5b31b/'}
                 />
-              </li>
-              <li>
+              </div>
+              <div className='pure-u-1-3'>
                 <Member
                   image={EMateu}
                   name={'Emiliano Mateu'}
@@ -47,8 +57,8 @@ class Stack extends Component {
                   description={'He loves backend too'}
                   linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
                 />
-              </li>
-              <li>
+              </div>
+              <div className='pure-u-1-3'>
                 <Member
                   image={JCtkc}
                   name={'Juan Settecase'}
@@ -56,8 +66,8 @@ class Stack extends Component {
                   description={'The Bug Slayer'}
                   linkedIn={'https://www.linkedin.com/in/juan-ignacio-settecase/'}
                 />
-              </li>
-              <li>
+              </div>
+              <div className='pure-u-1-3'>
                 <Member
                   image={JDans}
                   name={'Juan Dans'}
@@ -65,8 +75,8 @@ class Stack extends Component {
                   description={'Office greatest Shazam'}
                   linkedIn={'https://www.linkedin.com/in/juan-bautista-dans-29a36ab4/'}
                 />
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </Content>
       </Wrapper>
