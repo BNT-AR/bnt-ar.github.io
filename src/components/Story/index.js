@@ -20,7 +20,7 @@ class Story extends Component {
           <div>
             <H1>{ this.props.title }</H1>
             { this.props.icon && this.props.icon.image && (
-              <Icon image={this.props.icon.image} title={this.props.icon.title} />
+              <Icon image={this.props.icon.image} title={this.props.icon.title} titleColor={this.props.icon.titleColor} />
             )}
             <P>{ this.props.description }</P>
           </div>

@@ -43,7 +43,8 @@ class Home extends Component {
           title={'We scale startup minded apps'}
           icon={{
             image: LaravelLogo,
-            title: 'Laravel'
+            title: 'Laravel',
+            titleColor: '#fb503b'
           }}
           description={`
             We have been working with companies all over the world in their apps since they started.
@@ -57,7 +58,8 @@ class Home extends Component {
           title={'We move fast and achieve goals'}
           icon={{
             image: ReactLogo,
-            title: 'React'
+            title: 'React',
+            titleColor: '#53c1de'
           }}
           description={`
             Companies move fast and need robust steps. We have the expertise of

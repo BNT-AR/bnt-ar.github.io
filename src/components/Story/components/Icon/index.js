@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Icon = (props) => (
   <div className={props.className}>
     <img src={props.image} alt='' />
-    { props.title && <span>{ props.title }</span> }
+    { props.title && <span style={{'color': props.titleColor}}>{ props.title }</span> }
   </div>
 )
 
@@ -24,6 +24,6 @@ export default styled(Icon)`
     vertical-align: middle;
     color: #666;
     line-height: 35px;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 8px;
   }
 `
