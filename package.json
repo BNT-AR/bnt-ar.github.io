@@ -10,10 +10,23 @@
     "react-scroll": "^1.5.4",
     "styled-components": "^2.1.1"
   },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/standard",
+    "lint-fix": "./node_modules/.bin/standard --fix"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "pre-commit": [
+    "lint"
+  ]
 }

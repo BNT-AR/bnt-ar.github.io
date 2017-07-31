@@ -1,9 +1,9 @@
 import { css } from 'styled-components'
 import { breakpoints } from '../../../../styled'
 
-const gridResponsive = Object.keys(breakpoints).reduce((css, key)  => {
-  const value = breakpoints[key];
-  return css += `
+const gridResponsive = Object.keys(breakpoints).reduce((css, key) => {
+  const value = breakpoints[key]
+  return css + `
     @media screen and (max-width: ${value}px) {
       .pure-u-${key}-1,
       .pure-u-${key}-1-1,

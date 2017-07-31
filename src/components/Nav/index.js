@@ -4,7 +4,6 @@ import Wrapper from './components/Wrapper'
 import Item from './components/Item'
 
 class Nav extends Component {
-
   scrollTo = (nodeId) => {
     const element = document.getElementById(nodeId)
     const windowOffsetTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0)

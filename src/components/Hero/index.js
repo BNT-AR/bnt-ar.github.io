@@ -38,10 +38,12 @@ class Hero extends Component {
           </P>
         </div>
 
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10'
-             onClick={this.arrowHandler}
-             onKeyPress={this.arrowHandler}
-             tabIndex={this.props.arrowToId ? '0' : false}
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 20 10'
+          onClick={this.arrowHandler}
+          onKeyPress={this.arrowHandler}
+          tabIndex={this.props.arrowToId ? '0' : false}
         >
           <g fill='none' stroke='#fff' strokeLinecap='round'>
             <polyline strokeLinejoin='round' points='.657 4.981 17.924 4.981 13.027 9.878' />
