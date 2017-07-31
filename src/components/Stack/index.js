@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import H1 from '../H1'
+import P from '../P'
 import Wrapper from './components/Wrapper'
-import Content from './components/Content'
 import Logo from './components/Logo'
 
 import LaravelLogo from './assets/laravel.svg'
@@ -20,29 +21,49 @@ class Stack extends Component {
   render () {
     return (
       <Wrapper>
-        <Content>
-          <div>
-            <h1>We love and master some awesome tools</h1>
-            <p>
-              All of them give us power to do anything. We keep choosing Open Source every day.
-            </p>
+        <H1>We love and master some awesome tools</H1>
+        <P>
+          All of them give us power to do anything. We keep choosing Open Source every day.
+        </P>
 
-            <ul>
-              <li><Logo image={LaravelLogo} title={'Laravel'} /></li>
-              <li><Logo image={ReactLogo} title={'React & Native'} /></li>
-              <li><Logo image={AngularLogo} title={'Angular'} /></li>
-              <li><Logo image={Vuejs} title={'Vue.js'} /></li>
-              <li><Logo image={AwsLogo} title={'AWS'} /></li>
-              <li><Logo image={NginxLogo} title={'Nginx'} /></li>
-              <li><Logo image={PhpLogo} title={'PHP'} /></li>
-              <li><Logo image={JsLogo} title={'JavaScript'} /></li>
-              <li><Logo image={NodeJsLogo} title={'Node.js'} /></li>
-              <li><Logo image={Css3Logo} title={'CSS3'} /></li>
-              <li><Logo image={MysqlLogo} title={'MySQL'} /></li>
-              <li><Logo image={MongoDbLogo} title={'MongoDB'} /></li>
-            </ul>
+        <div className='pure-g'>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={LaravelLogo} title={'Laravel'} />
           </div>
-        </Content>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={ReactLogo} title={'React & Native'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={AngularLogo} title={'Angular'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={Vuejs} title={'Vue.js'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={AwsLogo} title={'AWS'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={NginxLogo} title={'Nginx'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={PhpLogo} title={'PHP'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={JsLogo} title={'JavaScript'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={NodeJsLogo} title={'Node.js'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={Css3Logo} title={'CSS3'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={MysqlLogo} title={'MySQL'} />
+          </div>
+          <div className='pure-u-1-4 pure-u-md-1-2'>
+            <Logo image={MongoDbLogo} title={'MongoDB'} />
+          </div>
+        </div>
       </Wrapper>
     )
   }

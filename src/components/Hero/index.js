@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { animateScroll } from 'react-scroll'
 import Wrapper from './components/Wrapper'
+import P from '../P'
 
 class Hero extends Component {
   scrollTo = (e, nodeId) => {
@@ -32,9 +33,9 @@ class Hero extends Component {
           <h1>
             { this.props.title }
           </h1>
-          <p>
+          <P>
             { this.props.legend }
-          </p>
+          </P>
         </div>
 
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 10'

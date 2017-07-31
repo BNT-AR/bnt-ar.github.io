@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { injectGlobal } from 'styled-components'
 import { normalize } from 'polished'
-import { Grid } from './components/PureCSS'
+import { Grid, GridResponsive } from './components/PureCSS'
 import Home from './scenes/Home'
 
 /* eslint-disable */
 injectGlobal` 
   ${normalize()}
   ${Grid}
+  ${GridResponsive}
 `
 /* eslint-enable */
 

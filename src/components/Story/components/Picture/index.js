@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { bp } from '../../../../styled'
 
 export default styled.div`
   position: absolute;
@@ -14,4 +15,13 @@ export default styled.div`
   width: calc(50% - 30px);
   height: calc(100% - 60px);
   background: url(${props => props.imageUrl}) no-repeat 50% 50% / contain;
+  
+  
+  ${bp('ts')`
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 0 30px;
+    height: 50vh;
+  `}
 `

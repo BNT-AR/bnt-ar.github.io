@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { bp } from '../../../../styled'
 
 export default styled.div`
   position: absolute;
@@ -20,40 +21,19 @@ export default styled.div`
     text-align: right;
   `}
   
+  
+  ${bp('ts')`
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 30px 0 0;
+    text-align: center;
+  `}
+  
   > div {
     max-width: 500px;
     padding: 0 30px;
     display: inline-block;
     text-align: left;
-  }
-  
-  h1 {
-    position: relative;
-    color: #000;
-    font-family: 'Open Sans',' Helvetica Neue', Arial, sans-serif;
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 1.3;
-    margin: 0 0 1em;
-    border-bottom: 1px solid transparent;
-    &:before {
-      content: ' ';
-      position: absolute;
-      left: 0;
-      bottom: -0.5em;
-      width: 30%;
-      height: 1px;
-      background: #000;
-    }
-  }
-  
-  p {
-    font: 400 18px/2 'Open Sans',' Helvetica Neue', Arial, sans-serif;
-  }
-  
-  img {
-    display: block;
-    height: 35px;
-    margin: 30px 0;
   }
 `

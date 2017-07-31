@@ -1,28 +1,57 @@
 import styled from 'styled-components'
+import P from '../../../P'
+import { bp, fontFamily, fadeIn } from '../../../../styled'
 
 export default styled.div`
   position: relative;
   height: 100vh;
+  min-height: 510px;
   background: #26a6d6;
+  
+  ${fadeIn()}
   
   h1 {
     color: #fff;
-    font-family: 'Open Sans',' Helvetica Neue', Arial, sans-serif;
-    font-size: 72px;
+    font-family: ${fontFamily};
+    font-size: 64px;
     font-weight: 400;
     text-align: center;
     line-height: 1.3;
     margin: 0;
+
+    ${bp('ts')`
+      font-size: 58px;
+    `}
+
+    ${bp('md')`
+      font-size: 42px;
+    `}
+    
+    ${bp('sm')`
+      font-size: 32px;
+      padding: 0 30px;
+      br {
+        display: none;
+      }
+    `}
   }
   
-  p {
+  ${P} {
     color: #fff;
-    font: 400 18px/1.5 'Open Sans',' Helvetica Neue', Arial, sans-serif;
     text-align: center;
     max-width: 960px;
     margin: 30px auto 0;
+    
+    ${bp('ts')`
+      max-width: 730px;
+      margin: 30px auto;
+      padding: 0 30px;
+      br {
+        display: none;
+      }
+    `}
   }
-  
+
   > div {
     position: absolute;
     top: 50%;
@@ -35,7 +64,7 @@ export default styled.div`
     position: absolute;
     width: 30px;
     height: 30px;
-    left: calc(50% - 50px);
+    left: calc(50% - 25px);
     bottom: 30px;
     transform: rotate(90deg);
     border-radius: 100%;

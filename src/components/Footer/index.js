@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import Logo from '../Logo'
 import Nav from '../Nav'
 import Info from './components/Info'
-import {clearFix} from 'polished'
+import { clearFix } from 'polished'
+import { bp } from '../../styled'
 
 const Footer = (props) => (
   <div className={props.className}>
@@ -21,9 +22,13 @@ const Footer = (props) => (
 
 export default styled(Footer)`
   position: relative;
-  padding: 70px 30px;
+  padding: 50px 30px;
   background: #26a6d6;
   
+  ${bp('sm')`
+    text-align: center;
+  `}
+
   > div {
     max-width: 1000px;
     margin: 0 auto;
@@ -32,19 +37,19 @@ export default styled(Footer)`
 
   ${Logo} {
     margin: 20px 0;
-    // position: absolute;
-    // z-index: 1;
-    // left: 40px;
-    // top: 40px;
   }
-  
+
   ${Nav} {
     position: absolute;
     z-index: 1;
     right: 40px;
     top: 40px;
+    
+    ${bp('sm')`
+      position: static;
+    `}
   }
-  
+
   a {
     color: #fff;
     display: inline-block;

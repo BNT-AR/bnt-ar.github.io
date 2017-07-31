@@ -25,8 +25,8 @@ export default styled(Member)`
     content: ' ';
     position: absolute;
     z-index: 3;
-    bottom: 5px;
-    left: 5px;
+    top: 8px;
+    right: 8px;
     width: 16px;
     height: 16px;
     background: #fff url(${LinkedInLogo}) no-repeat 50% 50% / cover;

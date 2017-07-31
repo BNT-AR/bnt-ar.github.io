@@ -27,60 +27,58 @@ class Home extends Component {
               <br />for startups like yours.
             </span>
           )}
-          legend={`
-            We bring practical and scalable solutions to turn new ideas into real products that mean business.
-            Explore our approach and process to make apps comes true.
-          `}
+          legend={(
+            <span>
+              {'We bring practical and scalable solutions to turn new ideas into real products that mean business. '}
+              <br />
+              {'Explore our approach and process to make apps comes true.'}
+            </span>
+            )}
           arrowToId={'about'}
         />
         <Story
           id={'about'}
           layout={'left'}
           image={'https://www.dtelepathy.com/images/work/quip/homepage-feature.584410d34edbd3bf.jpg'}
-          content={(
-            <div>
-              <h1>We scale startup minded apps</h1>
-              <img src={LaravelLogo} alt='' />
-              <p>
-                We have been working with companies all over the world in their apps since they started.
-                Some of them now handles million of users a month, high traffic load and online transactions.
-                Yes, they chose custom software built on standards.
-              </p>
-            </div>
-          )}
+          title={'We scale startup minded apps'}
+          icon={{
+            image: LaravelLogo,
+            title: 'Laravel'
+          }}
+          description={`
+            We have been working with companies all over the world in their apps since they started.
+            Some of them now handles million of users a month, high traffic load and online transactions.
+            Yes, they chose custom software built on standards.
+          `}
         />
         <Story
           layout={'right'}
           image={'https://www.dtelepathy.com/images/work/roche/homepage-feature.19833338dc33a8f2.jpg'}
-          content={(
-            <div>
-              <h1>We move fast and achieve goals</h1>
-              <img src={ReactLogo} alt='' />
-              <p>
-                Companies move fast and need robust steps. We have the expertise of
-                handling structural decisions with the ability to mutate when needed.
-                Your time is the most valuable, we know that.
-              </p>
-            </div>
-          )}
+          title={'We move fast and achieve goals'}
+          icon={{
+            image: ReactLogo,
+            title: 'React'
+          }}
+          description={`
+            Companies move fast and need robust steps. We have the expertise of
+            handling structural decisions with the ability to mutate when needed.
+            Your time is the most valuable, we know that.
+          `}
         />
         <Story
           layout={'left'}
           image={CloudImage}
-          content={(
-            <div>
-              <h1>We cloud the App and it just works</h1>
-              <img src={AwsLogo} alt='Amazon AWS' />
-              <p>
-                When your site is launched, the tools used to keep it running are essential to have 99.95% availability.
-                It's not only about Virtual Servers, but also Node Balancers, DNS, CDN, Transcoding Tools, Database
-                Mirroring, and more fancy words that will keep your things running.
-                We have wide experience with Amazon AWS, Digital Ocean and Linode.
-              </p>
-            </div>
-          )}
+          title={'We cloud the app and it just works'}
+          icon={{
+            image: AwsLogo
+          }}
+          description={`
+            When your site is launched, the tools used to keep it running are essential to have 99.95% availability.
+            It's not only about Virtual Servers, but also Node Balancers, DNS, CDN, Transcoding Tools, Database
+            Mirroring, and more fancy words that will keep your things running.
+            We have wide experience with Amazon AWS, Digital Ocean and Linode.
+          `}
         />
-
         <Stack />
         <Team />
         <Footer />
