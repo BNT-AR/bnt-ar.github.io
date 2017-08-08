@@ -4,14 +4,33 @@ import P from '../P'
 import Wrapper from './components/Wrapper'
 import Member from './components/Member'
 
-import BNT from './assets/bnt.jpg'
-import GBrunacci from './assets/gbrunacci.jpg'
-import MBilbao from './assets/mbilbao.jpg'
-import EMateu from './assets/emateu.jpg'
-import JCtkc from './assets/jctkc.jpg'
-import JDans from './assets/jdans.jpg'
+import BNT from './assets/18.jpg'
+
+import standBilbao from './assets/3.jpg'
+import standMateu from './assets/4.jpg'
+import standSette from './assets/7.jpg'
+import standDans from './assets/9.jpg'
+import standBrunacci from './assets/16.jpg'
+
+import relaxBilbao from './assets/36.jpg'
+import relaxMateu from './assets/35.jpg'
+import relaxSette from './assets/24.jpg'
+import relaxDans from './assets/40.jpg'
+import relaxBrunacci from './assets/22.jpg'
 
 class Stack extends Component {
+  constructor (props) {
+    super(props)
+    const relax = window.location.href.indexOf('relax')
+    this.pics = {
+      'bilbao': relax ? relaxBilbao : standBilbao,
+      'mateu': relax ? relaxMateu : standMateu,
+      'sette': relax ? relaxSette : standSette,
+      'dans': relax ? relaxDans : standDans,
+      'brunacci': relax ? relaxBrunacci : standBrunacci
+    }
+  }
+
   render () {
     return (
       <Wrapper id={'team'}>
@@ -32,7 +51,7 @@ class Stack extends Component {
           </div>
           <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
             <Member
-              image={GBrunacci}
+              image={this.pics['brunacci']}
               name={'Gabriel Brunacci'}
               title={'Founder & Director'}
               description={'Programming jewel turned into CEO'}
@@ -41,7 +60,7 @@ class Stack extends Component {
           </div>
           <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
             <Member
-              image={MBilbao}
+              image={this.pics['bilbao']}
               name={'Martín Bilbao'}
               title={'Software Engineer Hero'}
               description={'Algorithms in his blood'}
@@ -50,7 +69,7 @@ class Stack extends Component {
           </div>
           <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
             <Member
-              image={EMateu}
+              image={this.pics['mateu']}
               name={'Emiliano Mateu'}
               title={'Cutting Edge Front-end'}
               description={'He loves backend too'}
@@ -59,7 +78,7 @@ class Stack extends Component {
           </div>
           <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
             <Member
-              image={JCtkc}
+              image={this.pics['sette']}
               name={'Juan Settecase'}
               title={'Grandmaster Laravel'}
               description={'The Bug Slayer'}
@@ -68,7 +87,7 @@ class Stack extends Component {
           </div>
           <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
             <Member
-              image={JDans}
+              image={this.pics['dans']}
               name={'Juan Dans'}
               title={'React.js Rockstar'}
               description={'Office greatest Shazam'}
