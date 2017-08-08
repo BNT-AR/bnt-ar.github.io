@@ -5,13 +5,6 @@ import Wrapper from './components/Wrapper'
 import Member from './components/Member'
 
 import BNT from './assets/18.jpg'
-
-import standBilbao from './assets/3.jpg'
-import standMateu from './assets/4.jpg'
-import standSette from './assets/7.jpg'
-import standDans from './assets/9.jpg'
-import standBrunacci from './assets/16.jpg'
-
 import relaxBilbao from './assets/36.jpg'
 import relaxMateu from './assets/35.jpg'
 import relaxSette from './assets/24.jpg'
@@ -21,13 +14,12 @@ import relaxBrunacci from './assets/22.jpg'
 class Stack extends Component {
   constructor (props) {
     super(props)
-    const relax = window.location.href.indexOf('relax')
     this.pics = {
-      'bilbao': relax ? relaxBilbao : standBilbao,
-      'mateu': relax ? relaxMateu : standMateu,
-      'sette': relax ? relaxSette : standSette,
-      'dans': relax ? relaxDans : standDans,
-      'brunacci': relax ? relaxBrunacci : standBrunacci
+      'bilbao': relaxBilbao,
+      'mateu': relaxMateu,
+      'sette': relaxSette,
+      'dans': relaxDans,
+      'brunacci': relaxBrunacci
     }
   }
 
