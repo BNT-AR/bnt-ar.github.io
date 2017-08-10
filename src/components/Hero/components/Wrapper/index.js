@@ -65,7 +65,7 @@ export default styled.div`
     width: 30px;
     height: 30px;
     left: calc(50% - 25px);
-    bottom: 30px;
+    bottom: 60px;
     transform: rotate(90deg);
     border-radius: 100%;
     cursor: pointer;

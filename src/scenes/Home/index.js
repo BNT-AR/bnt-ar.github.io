@@ -25,8 +25,9 @@ class Home extends Component {
         <Hero
           title={(
             <span>
-              We do web & mobile apps
-              <br />for startups like yours.
+              {'We do web & mobile apps '}
+              <br />
+              {'for startups like yours.'}
             </span>
           )}
           legend={(
