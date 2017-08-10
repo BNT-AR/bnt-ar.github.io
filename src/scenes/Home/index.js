@@ -10,7 +10,9 @@ import Team from '../../components/Team'
 import LaravelLogo from './assets/laravel-logo.svg'
 import ReactLogo from './assets/react-logo.svg'
 import AwsLogo from './assets/aws.svg'
-import CloudImage from './assets/cloud.jpg'
+import Image1 from './assets/ilust_001.png'
+import Image2 from './assets/ilust_002.png'
+import Image3 from './assets/ilust_003.png'
 
 class Home extends Component {
   render () {
@@ -39,7 +41,7 @@ class Home extends Component {
         <Story
           id={'about'}
           layout={'left'}
-          image={'https://www.dtelepathy.com/images/work/quip/homepage-feature.584410d34edbd3bf.jpg'}
+          image={Image1}
           title={'We scale startup minded apps'}
           icon={{
             image: LaravelLogo,
@@ -54,7 +56,7 @@ class Home extends Component {
         />
         <Story
           layout={'right'}
-          image={'https://www.dtelepathy.com/images/work/roche/homepage-feature.19833338dc33a8f2.jpg'}
+          image={Image2}
           title={'We move fast and achieve goals'}
           icon={{
             image: ReactLogo,
@@ -69,7 +71,7 @@ class Home extends Component {
         />
         <Story
           layout={'left'}
-          image={CloudImage}
+          image={Image3}
           title={'We cloud the app and it just works'}
           icon={{
             image: AwsLogo
