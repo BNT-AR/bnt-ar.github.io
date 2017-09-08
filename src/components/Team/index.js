@@ -46,7 +46,7 @@ class Stack extends Component {
               image={this.pics['brunacci']}
               name={'Gabriel Brunacci'}
               title={'Founder & Director'}
-              description={'Programming jewel turned into CEO'}
+              description={'Tech and code geek'}
               linkedIn={'https://www.linkedin.com/in/gabrielbrunacci/'}
             />
           </div>
