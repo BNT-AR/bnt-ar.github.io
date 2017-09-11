@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { injectGlobal } from 'styled-components'
 import { normalize } from 'polished'
-import { Grid, GridResponsive } from './components/PureCSS'
+import { Grid, GridResponsive, Form } from './components/PureCSS'
 import { fontFamily } from './styled'
 import Home from './scenes/Home'
 
@@ -10,6 +10,7 @@ injectGlobal`
   ${normalize()}
   ${Grid}
   ${GridResponsive}
+  ${Form}
 
   html, .pure-g [class *= "pure-u"] {
     font-family: ${fontFamily};

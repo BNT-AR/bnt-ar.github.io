@@ -35,7 +35,7 @@ class Nav extends Component {
       <div className={this.props.className}>
         <Item onKeyPress={this.onAboutSelect} onClick={this.onAboutSelect}>About</Item>
         <Item onKeyPress={this.onTeamSelect} onClick={this.onTeamSelect}>Team</Item>
-        <Item bordered href='mailto:info@bravenew.tech'>Contact</Item>
+        <Item bordered href='#form'>Contact</Item>
       </div>
     )
   }

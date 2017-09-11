@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
+import Form from './components/Form'
 import Nav from '../Nav'
 import Info from './components/Info'
 import { clearFix } from 'polished'
@@ -8,14 +9,20 @@ import { bp } from '../../styled'
 
 const Footer = (props) => (
   <div className={props.className}>
-    <div>
-      <Logo />
-
-      <Info>
-        <div><a href='mailto:info@bravenew.tech'>info@bravenew.tech</a></div>
-        <div><a href='tel:+16464800357'>+1 (646) 480 0357</a></div>
-        <div>Niceto Vega 4736, Buenos Aires</div>
-      </Info>
+    <div className='pure-g'>
+      <div className='pure-u-1-3 pure-u-ts-1-2'>
+        <Logo />
+      </div>
+      <div id='form' className='pure-u-1-3 pure-u-ts-1-3 hidden-form'>
+        <Form />
+      </div>
+      <div className='pure-u-1-3 pure-u-ts-1-2'>
+        <Info>
+          <div><a href='mailto:info@bravenew.tech'>info@bravenew.tech</a></div>
+          <div><a href='tel:+16464800357'>+1 (646) 480 0357</a></div>
+          <div>Niceto Vega 4736, Buenos Aires</div>
+        </Info>
+      </div>
     </div>
   </div>
 )
@@ -60,5 +67,9 @@ export default styled(Footer)`
     &:focus {
       border-bottom: 1px solid rgba(255, 255, 255, 1);
     }
+  }
+
+  @media screen and (max-width: 768px){
+    .hidden-form{ display: none; }
   }
 `
