@@ -4,30 +4,29 @@ import axios from 'axios'
 
 class Form extends Component {
   constructor (props) {
-    super(props);
-
+    super(props)
     this.state = {
       name: '',
       email: '',
       message: '',
       thankyouVisible: false
-    };
+    }
   }
 
   handleName = (e) => {
-    this.setState({name: e.target.value});
+    this.setState({name: e.target.value})
   }
 
   handleEmail = (e) => {
-    this.setState({email: e.target.value});
+    this.setState({email: e.target.value})
   }
 
   handleMessage = (e) => {
-    this.setState({message: e.target.value});
+    this.setState({message: e.target.value})
   }
 
   submit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     axios({
       method: 'post',
       url: process.env.REACT_APP_API_URL + '/contact',
@@ -38,21 +37,19 @@ class Form extends Component {
       }
     })
     .then(response => {
-
       this.setState({
-         thankyouVisible: true
+        thankyouVisible: true
       })
 
       setTimeout(() => {
-        this.setState({ 
+        this.setState({
           thankyouVisible: false
         })
       }, 5000)
-
     })
     .catch(error => {
-      console.log('Error fetching and parsing data', error);
-    });
+      console.log('Error fetching and parsing data', error)
+    })
   }
 
   render () {
@@ -65,11 +62,11 @@ class Form extends Component {
               <p>We will get in touch with you soon.</p>
             </div>
           </div>
-          <input type="text" placeholder="Your Name" defaultValue={this.state.name} onChange={this.handleName} />
-          <input type="email" placeholder="E-mail" defaultValue={this.state.email} onChange={this.handleEmail} />
-          <textarea placeholder="Message" defaultValue={this.state.message} onChange={this.handleMessage} />
-          <button type="submit">Send</button>
-        </form> 
+          <input type='text' placeholder='Your Name' defaultValue={this.state.name} onChange={this.handleName} />
+          <input type='email' placeholder='E-mail' defaultValue={this.state.email} onChange={this.handleEmail} />
+          <textarea placeholder='Message' defaultValue={this.state.message} onChange={this.handleMessage} />
+          <button type='submit'>Send</button>
+        </form>
       </Wrapper>
     )
   }

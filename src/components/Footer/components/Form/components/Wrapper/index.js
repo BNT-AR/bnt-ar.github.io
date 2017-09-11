@@ -14,7 +14,7 @@ export default styled.div`
     left: 0;
     right: 0px;
     top: 0;
-    bottom: 0;  
+    bottom: 0;
     text-align: center;
     opacity: 0;
     z-index: -1;
