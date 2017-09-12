@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import imgError from './error.svg'
 
 export default styled.div`
   form{
@@ -52,7 +53,17 @@ export default styled.div`
     100% { opacity: 0; }
   }
 
+  /*  ERROR ICON */
+
+  .errorIcon{
+    background-image: url('${imgError}');
+    background-repeat: no-repeat;
+    background-position: 310px 10px;
+    background-size: 15px
+  }
+
   /*  FORM */
+
   input,
   textarea,
   button{
@@ -76,7 +87,8 @@ export default styled.div`
 
   textarea {
     resize: none; 
-    height: 100px
+    height: 100px;
+    padding-top: 6px;
   }
 
   input { 
