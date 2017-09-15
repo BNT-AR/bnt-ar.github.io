@@ -48,6 +48,9 @@ class Form extends Component {
   submit = (e) => {
     e.preventDefault()
 
+    // changes the content of the button from 'Submit' to 'Sending'
+    this.setState({submitting: true})
+
     //  email validation
     const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.state.email)
 
@@ -69,36 +72,30 @@ class Form extends Component {
     }
 
     if (!this.state.name || !this.state.email || !this.state.message) {
+      this.setState({submitting: false})
       return false
     }
 
-    // changes the content of the button from 'Submit' to 'Sending'
-    if (this.state.showForm) {
-      this.setState({submitting: true})
+    const data = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
     }
 
-    axios({
-      method: 'post',
-      url: process.env.REACT_APP_API_URL + '/contact',
-      data: {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      }
-    })
+    axios({ method: 'post', url: process.env.REACT_APP_API_URL + '/contact', data })
       .then(response => {
         this.setState({
           showForm: true,
           success: true,
-          submitting: true
+          submitting: false
         })
       })
-      .catch(error => {
+      .catch(() => {
         this.setState({
           success: false,
-          showForm: false
+          showForm: false,
+          submitting: false
         })
-        console.log('Error fetching and parsing data', error)
       })
   }
 
@@ -108,9 +105,7 @@ class Form extends Component {
         {this.state.showForm ? (
           <div className={'showMessage fadeInClass'}>
             <p>
-              {(this.state.success) ?
-                'Thank you for your message.\n We will get in touch with you soon.':
-                'There has been an error. Please try again in a couple of minutes.'
+              {(this.state.success) ? 'Thank you for your message.\n We will get in touch with you soon.' : 'There has been an error. Please try again in a couple of minutes.'
               }
             </p>
           </div>
@@ -121,20 +116,20 @@ class Form extends Component {
               placeholder='Your name'
               defaultValue={this.state.name}
               onChange={this.nameChange}
-              className={(this.state.errorName ? 'errorIcon' : '')}/>
+              className={(this.state.errorName ? 'errorIcon' : '')} />
             <input
               type='email'
               placeholder='example@email.com'
               defaultValue={this.state.email}
               onChange={this.emailChange}
-              className={(this.state.errorEmail ? 'errorIcon' : '')}/>
+              className={(this.state.errorEmail ? 'errorIcon' : '')} />
             <textarea
               placeholder='Message'
               defaultValue={this.state.message}
               onChange={this.messageChange}
-              className={(this.state.errorMessage ? 'errorIcon' : '')}/>
+              className={(this.state.errorMessage ? 'errorIcon' : '')} />
             <button type='submit'>
-              {this.state.submitting ? 'Sending' : 'Submit'}
+              {this.state.submitting ? 'Sending...' : 'Submit'}
             </button>
           </form>
         )}

@@ -10,13 +10,13 @@ import { bp } from '../../styled'
 const Footer = (props) => (
   <div className={props.className}>
     <div className='pure-g'>
-      <div className='pure-u-1-3 pure-u-ts-1-2'>
+      <div className='pure-u-1-3 pure-u-md-1-2'>
         <Logo />
       </div>
-      <div id='form' className='pure-u-1-3 pure-u-ts-1-3 hidden-form'>
+      <div id='form' className='pure-u-1-3 hidden-form'>
         <Form />
       </div>
-      <div className='pure-u-1-3 pure-u-ts-1-2'>
+      <div className='pure-u-1-3 pure-u-md-1-2'>
         <Info>
           <div><a href='mailto:info@bravenew.tech'>info@bravenew.tech</a></div>
           <div><a href='tel:+16464800357'>+1 (646) 480 0357</a></div>
