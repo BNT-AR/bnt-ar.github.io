@@ -9,56 +9,72 @@ class Form extends Component {
       name: '',
       email: '',
       message: '',
-      thankyouVisible: false,
+      showForm: false,
       errorName: false,
       errorEmail: false,
-      errorMessage: false
+      errorMessage: false,
+      submitting: false
     }
   }
 
-  handleName = (e) => {
+  //
+  nameChange = (e) => {
     this.setState({name: e.target.value})
-    console.log(e.target.value)
-    if(!e.target.value) {
-      this.setState({ errorName: true })
+    if (!e.target.value) {
+      this.setState({errorName: true})
+    } else {
+      this.setState({errorName: false})
     }
   }
 
-  handleEmail = (e) => {
+  emailChange = (e) => {
     this.setState({email: e.target.value})
-    if(!e.target.value) {
-      this.setState({ errorEmail: true })
+    if (!e.target.value) {
+      this.setState({errorEmail: true})
+    } else {
+      this.setState({errorEmail: false})
     }
   }
 
-  handleMessage = (e) => {
+  messageChange = (e) => {
     this.setState({message: e.target.value})
-    if(!e.target.value) {
-      this.setState({ errorMessage: true })
+    if (!e.target.value) {
+      this.setState({errorMessage: true})
+    } else {
+      this.setState({errorMessage: false})
     }
   }
 
   submit = (e) => {
     e.preventDefault()
 
-    if(!this.state.name){
-      this.setState({ errorName: true })
-    }else{
-      this.setState({ errorName: false })
+    //  email validation
+    const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.state.email)
+
+    //  empty fields validations
+    if (!this.state.name) {
+      this.setState({errorName: true})
+    } else {
+      this.setState({errorName: false})
     }
-    if(!this.state.email){
-      this.setState({ errorEmail: true })
-    }else{
-      this.setState({ errorEmail: false })
+    if (!this.state.email || !validEmail) {
+      this.setState({errorEmail: true})
+    } else {
+      this.setState({errorEmail: false})
     }
-    if(!this.state.message){
-      this.setState({ errorMessage: true })
-    }else{
-      this.setState({ errorMessage: false })
+    if (!this.state.message) {
+      this.setState({errorMessage: true})
+    } else {
+      this.setState({errorMessage: false})
     }
 
-    if(!this.state.name || !this.state.email || !this.state.message){
-      return false;
+    if (!this.state.name || !this.state.email || !this.state.message) {
+      return false
+    }
+
+    // changes the content of the button from 'Submit' to 'Sending'
+    if (this.state.showForm) {
+      this.setState({submitting: true})
     }
 
     axios({
@@ -70,37 +86,58 @@ class Form extends Component {
         message: this.state.message
       }
     })
-    .then(response => {
-      this.setState({
-        thankyouVisible: true
-      })
-
-      setTimeout(() => {
+      .then(response => {
         this.setState({
-          thankyouVisible: false
+          showForm: true,
+          success: true,
+          submitting: true
         })
-      }, 5000)
-    })
-    .catch(error => {
-      console.log('Error fetching and parsing data', error)
-    })
+      })
+      .catch(error => {
+        this.setState({
+          success: false,
+          showForm: false
+        })
+        console.log('Error fetching and parsing data', error)
+      })
   }
 
   render () {
     return (
       <Wrapper>
-        <form onSubmit={this.submit}>
-          <div className={'showThankYou ' + (this.state.thankyouVisible ? 'fadeInClass' : '')}>
-            <div>
-              <p>Thank you for your message.</p>
-              <p>We will get in touch with you soon.</p>
-            </div>
+        {this.state.showForm ? (
+          <div className={'showMessage fadeInClass'}>
+            <p>
+              {(this.state.success) ?
+                'Thank you for your message.\n We will get in touch with you soon.':
+                'There has been an error. Please try again in a couple of minutes.'
+              }
+            </p>
           </div>
-          <input type='text' placeholder='Your Name' defaultValue={this.state.name} onChange={this.handleName} className={(this.state.errorName ? 'errorIcon' : '')} required />
-          <input type='email' placeholder='E-mail' defaultValue={this.state.email} onChange={this.handleEmail} className={(this.state.errorEmail ? 'errorIcon' : '')} required />
-          <textarea placeholder='Message' defaultValue={this.state.message} onChange={this.handleMessage} className={(this.state.errorMessage ? 'errorIcon' : '')} required />
-          <button type='submit'>Send</button>
-        </form>
+        ) : (
+          <form onSubmit={this.submit} noValidate>
+            <input
+              type='text'
+              placeholder='Your name'
+              defaultValue={this.state.name}
+              onChange={this.nameChange}
+              className={(this.state.errorName ? 'errorIcon' : '')}/>
+            <input
+              type='email'
+              placeholder='example@email.com'
+              defaultValue={this.state.email}
+              onChange={this.emailChange}
+              className={(this.state.errorEmail ? 'errorIcon' : '')}/>
+            <textarea
+              placeholder='Message'
+              defaultValue={this.state.message}
+              onChange={this.messageChange}
+              className={(this.state.errorMessage ? 'errorIcon' : '')}/>
+            <button type='submit'>
+              {this.state.submitting ? 'Sending' : 'Submit'}
+            </button>
+          </form>
+        )}
       </Wrapper>
     )
   }

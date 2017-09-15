@@ -8,49 +8,15 @@ export default styled.div`
 
   /* FORM MESSAGE */
 
-  .showThankYou{
-    position: absolute;
-    background-color: #FFFFFF;
-    padding: 30px;
-    left: 0;
-    right: 0px;
-    top: 0;
-    bottom: 0;
-    text-align: center;
-    opacity: 0;
-    z-index: -1;
+  .showMessage{
+    color: #FFFFFF;
+    transform: transition 4s all;
   }
 
-  .showThankYou div{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-  } 
-
-  /*  FORM ANIMATIONS */
+  /*  FORM ANIMATIONS
 
   .fadeInClass {
-    -webkit-animation: fadeInOut 5s linear forwards;
-    animation: fadeInOut 5s linear forwards;
-    opacity: 0;
-    z-index: 4;
-  }
-
-  @-webkit-keyframes fadeInOut {
-    5% { opacity: 1; }
-    40% { opacity: 0.75; }
-    60% { opacity: 0.5; }
-    80% { opacity: 0.25; }
-    100% { opacity: 0; }
-  }
-
-  @keyframes fadeInOut {
-    5% { opacity: 1; }
-    40% { opacity: 0.75; }
-    60% { opacity: 0.5; }
-    80% { opacity: 0.25; }
-    100% { opacity: 0; }
+    opacity: 1;
   }
 
   /*  ERROR ICON */
@@ -58,7 +24,7 @@ export default styled.div`
   .errorIcon{
     background-image: url('${imgError}');
     background-repeat: no-repeat;
-    background-position: 310px 10px;
+    background-position: 310px 8px;
     background-size: 15px
   }
 
