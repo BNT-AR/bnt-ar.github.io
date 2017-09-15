@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Wrapper from './../Form/components/Wrapper'
 import axios from 'axios'
+import autosize from 'autosize'
 
 class Form extends Component {
   constructor (props) {
@@ -15,6 +16,11 @@ class Form extends Component {
       errorMessage: false,
       submitting: false
     }
+  }
+
+  componentDidMount () {
+    var ta = document.querySelector('#messageArea')
+    autosize(ta)
   }
 
   //
@@ -124,7 +130,8 @@ class Form extends Component {
               onChange={this.emailChange}
               className={(this.state.errorEmail ? 'errorIcon' : '')} />
             <textarea
-              placeholder='Message'
+              id={'messageArea'}
+              placeholder='Drop us a line.'
               defaultValue={this.state.message}
               onChange={this.messageChange}
               className={(this.state.errorMessage ? 'errorIcon' : '')} />

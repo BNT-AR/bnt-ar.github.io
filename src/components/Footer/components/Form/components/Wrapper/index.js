@@ -2,9 +2,6 @@ import styled from 'styled-components'
 import imgError from './error.svg'
 
 export default styled.div`
-  form{
-    position: relative;
-  }
 
   /* FORM MESSAGE */
 
@@ -25,7 +22,7 @@ export default styled.div`
     background-image: url('${imgError}');
     background-repeat: no-repeat;
     background-position: 310px 8px;
-    background-size: 15px
+    background-size: 15px;
   }
 
   /*  FORM */
@@ -46,20 +43,43 @@ export default styled.div`
     padding-left: 2%;
     padding-right: 0;
     padding-bottom: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,.6);
+    background-color: inherit;
+    color: #FFF;
+    height:30px;
+    -moz-transition: border-color .4s ease-in-out;
+    -webkit-transition: border-color .4s ease-in-out;
+    -o-transition: border-color .4s ease-in-out;
+    transition: border-color .4s ease-in-out;
     &:focus{
-    outline: 0;
+      outline: 0;
+      border-bottom: 1px solid rgba(255,255,255,1);
+    }
+    &::-webkit-input-placeholder {
+      color: #FFFFFF;
+    }
+    &::-moz-placeholder {
+        color: #FFFFFF;
+    }
+    &::-moz-placeholder {
+        color: #FFFFFF; 
+    }
+    &::-ms-input-placeholder {
+        color: #FFFFFF;
     }
   }
 
   textarea {
-    resize: none; 
-    height: 100px;
-    padding-top: 6px;
+    resize: none;
+    -moz-transition: height 1s ease;
+    -webkit-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
   }
 
   input { 
-    height: 30px;
-    margin-bottom: 15px;
+    padding-bottom: 2%;
   }
 
   button{
@@ -69,8 +89,8 @@ export default styled.div`
     font-size: 14px;
     background-color: #196e8e;
     color: #FFFFFF;
-    margin-top: 15px;
-    width: 100%;
+    margin: 20px auto 0 auto;
+    width: 50%;
     cursor: pointer;
     transition: all .4s ease-in-out;
     &:hover,
