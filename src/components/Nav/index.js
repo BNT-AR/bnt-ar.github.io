@@ -30,12 +30,20 @@ class Nav extends Component {
     this.scrollTo('team')
   }
 
+  onFormSelect = (e) => {
+    if (e.type !== 'click' && e.charCode !== 13) {
+      return false
+    }
+    e.target.blur()
+    this.scrollTo('form')
+  }
+
   render () {
     return (
       <div className={this.props.className}>
         <Item onKeyPress={this.onAboutSelect} onClick={this.onAboutSelect}>About</Item>
         <Item onKeyPress={this.onTeamSelect} onClick={this.onTeamSelect}>Team</Item>
-        <Item bordered href='mailto:info@bravenew.tech'>Contact</Item>
+        <Item bordered onKeyPress={this.onFormSelect} onClick={this.onFormSelect}>Contact</Item>
       </div>
     )
   }
