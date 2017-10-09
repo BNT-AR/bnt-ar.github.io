@@ -1,31 +1,65 @@
 {
   "name": "bravenewtech",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "dependencies": {
     "autosize": "^4.0.0",
     "axios": "^0.16.2",
-    "polished": "^1.3.0",
+    "history": "^4.7.2",
+    "intl": "^1.2.5",
+    "jwt-decode": "^2.2.0",
+    "moment-timezone": "^0.5.13",
+    "polished": "^1.7.0",
+    "prop-types": "^15.6.0",
+    "raven-js": "^3.18.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-ga": "^2.3.4",
+    "react-helmet": "^5.2.0",
+    "react-intl": "^2.4.0",
+    "react-markdown": "^2.5.0",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "react-scroll": "^1.5.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "store": "^2.0.12",
     "styled-components": "^2.2.1"
-  },
-  "devDependencies": {
-    "pre-commit": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "yarn",
-    "lint-fix": "yarn",
+    "lint": "./node_modules/.bin/eslint './src/**/*.js'",
+    "lint-fix": "./node_modules/.bin/eslint './src/**/*.js' --fix",
+    "lint:css": "./node_modules/.bin/stylelint './src/**/*.js'",
     "deploy": "./shell/deploy.sh"
   },
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "pre-commit": "^1.2.2",
+    "redux-devtools-extension": "^2.13.2",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.0.0"
+  },
   "pre-commit": [
-    "lint"
+    "lint",
+    "lint:css"
   ]
 }

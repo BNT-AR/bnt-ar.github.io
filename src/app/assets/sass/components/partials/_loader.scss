@@ -1,0 +1,32 @@
+//
+//  Loader
+//
+
+.loader {
+  position: relative;
+  height: 56px;
+
+  @include fadeIn();
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    margin-top: -28px;
+    margin-left: -28px;
+    border-radius: 50%;
+    border: 1px solid #174864;
+    border-top-color: #fff;
+    animation: loaderAnimation .5s linear infinite;
+  }
+}
+
+
+@keyframes loaderAnimation {
+  to {
+    transform: rotate(360deg);
+  }
+}

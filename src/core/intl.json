@@ -1,0 +1,43 @@
+{
+  "en": {
+    "app.loading": "Loading...",
+    "app.login": "Log In",
+    "app.logout": "Log Out",
+    "app.logging_in": "Logging you in...",
+    "app.request.failure": "Whoops, something went wrong! please try again.",
+    "app.month.01": "January",
+    "app.month.02": "February",
+    "app.month.03": "March",
+    "app.month.04": "April",
+    "app.month.05": "May",
+    "app.month.06": "June",
+    "app.month.07": "July",
+    "app.month.08": "August",
+    "app.month.09": "September",
+    "app.month.10": "October",
+    "app.month.11": "November",
+    "app.month.12": "December",
+    "app.invalid_date": "Selected date is invalid"
+  },
+
+  "es": {
+    "app.loading": "Cargando...",
+    "app.login": "Ingresar",
+    "app.logout": "Salir",
+    "app.logging_in": "Ingresando...",
+    "app.request.failure": "¡Oops, algo salió mal! Por favor intente nuevamente.",
+    "app.month.01": "Enero",
+    "app.month.02": "Febrero",
+    "app.month.03": "Marzo",
+    "app.month.04": "Abril",
+    "app.month.05": "Mayo",
+    "app.month.06": "Junio",
+    "app.month.07": "Julio",
+    "app.month.08": "Agosto",
+    "app.month.09": "Septiembre",
+    "app.month.10": "Octubre",
+    "app.month.11": "Noviembre",
+    "app.month.12": "Diciembre",
+    "app.invalid_date": "La fecha seleccionada no es válida"
+  }
+}

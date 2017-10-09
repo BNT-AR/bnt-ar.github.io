@@ -1,0 +1,64 @@
+html {
+  background: #000; }
+
+body {
+  margin: 0;
+  background: #000; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.splash-screen {
+  height: 100vh;
+  padding: 100px 50px; }
+  .splash-screen img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 50px; }
+  .splash-screen--static img {
+    opacity: 0.5;
+    -webkit-animation: forwards fadeIn 400ms ease-in;
+            animation: forwards fadeIn 400ms ease-in; }
+
+.loader {
+  position: relative;
+  height: 56px;
+  opacity: 0.5;
+  -webkit-animation: forwards fadeIn 400ms ease-in;
+          animation: forwards fadeIn 400ms ease-in; }
+  .loader:before {
+    content: '';
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    margin-top: -28px;
+    margin-left: -28px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    border-top-color: #fff;
+    -webkit-animation: loaderAnimation .5s linear infinite;
+            animation: loaderAnimation .5s linear infinite; }
+
+@-webkit-keyframes loaderAnimation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes loaderAnimation {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }

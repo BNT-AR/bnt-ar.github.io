@@ -1,0 +1,16 @@
+//
+//  Index styles
+//
+
+html {
+  background: #26a6d6;
+}
+
+body {
+  margin: 0;
+  background: #26a6d6;
+}
+
+@import 'components/partials/fadeIn';
+@import 'components/partials/splash-screen';
+@import 'components/partials/loader';

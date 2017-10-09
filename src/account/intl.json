@@ -1,0 +1,65 @@
+{
+  "en": {
+    "account.global.placeholder.email": "Email",
+    "account.global.placeholder.password": "Password",
+    "account.global.placeholder.password_confirmation": "Repeat Password",
+    "account.global.validation.email": "Please insert your email",
+    "account.global.validation.password": "Please insert a password",
+    "account.global.validation.password_confirmation": "Passwords should match",
+
+    "account.logout.action": "Log Out",
+    "account.login.action": "Login",
+    "account.login.title": "Login",
+    "account.login.failed": "Invalid email or password",
+    "account.login.button.submit": "Secure Login",
+    "account.login.button.google": "Login with Google",
+    "account.login.button.facebook": "Login with Facebook",
+
+    "account.create.action": "Create Account",
+    "account.create.title": "Create Account",
+    "account.create.button.submit": "Create Account",
+    "account.create.button.google": "Login with Google",
+    "account.create.button.facebook": "Login with Facebook",
+
+    "account.forgot.action": "Forgot Password?",
+    "account.forgot.title": "Password Recovery",
+    "account.forgot.success": "Password recovery steps were sent to the email address",
+    "account.forgot.button.submit": "Send me an email",
+
+    "account.reset.title": "Reset Password",
+    "account.reset.button.submit": "Update Password",
+    "account.reset.success": "Password succesfully updated! [Account Login »](/account/login)"
+  },
+
+  "es": {
+    "account.global.placeholder.email": "Email",
+    "account.global.placeholder.password": "Contraseña",
+    "account.global.placeholder.password_confirmation": "Repetir Contraseña",
+    "account.global.validation.email": "Por favor ingresar email",
+    "account.global.validation.password": "Por favor ingresar contraseña",
+    "account.global.validation.password_confirmation": "Las contraseñas deben coincidir",
+
+    "account.logout.action": "Salir",
+    "account.login.action": "Ingresar",
+    "account.login.title": "Iniciar Sesión",
+    "account.login.failed": "Email o contraseña inválida",
+    "account.login.button.submit": "Ingresar",
+    "account.login.button.google": "Ingresar con Google",
+    "account.login.button.facebook": "Ingresar con Facebook",
+
+    "account.create.action": "Crear Cuenta",
+    "account.create.title": "Crear Cuenta",
+    "account.create.button.submit": "Crear Cuenta",
+    "account.create.button.google": "Ingresar con Google",
+    "account.create.button.facebook": "Ingresar con Facebook",
+
+    "account.forgot.action": "¿Olvidaste tu contraseña?",
+    "account.forgot.title": "Recuperar Contraseña",
+    "account.forgot.success": "Se ha enviado un email con los pasos para recuperar la contraseña",
+    "account.forgot.button.submit": "Enviarme un email",
+
+    "account.reset.title": "Nueva Contraseña",
+    "account.reset.button.submit": "Actualizar Contraseña",
+    "account.reset.success": "Contraseña actualizada con éxito! [Ingresar a mi cuenta »](/account/login)"
+  }
+}
