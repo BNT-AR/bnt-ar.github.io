@@ -77,7 +77,7 @@ class Form extends Component {
       this.setState({errorMessage: false})
     }
 
-    if (!this.state.name || !this.state.email || !this.state.message) {
+    if (!this.state.name || !this.state.email || !this.state.message || !validEmail) {
       this.setState({submitting: false})
       return false
     }
@@ -131,7 +131,7 @@ class Form extends Component {
               className={(this.state.errorEmail ? 'errorIcon' : '')} />
             <textarea
               id={'messageArea'}
-              placeholder='Drop us a line.'
+              placeholder='Drop us a line'
               defaultValue={this.state.message}
               onChange={this.messageChange}
               className={(this.state.errorMessage ? 'errorIcon' : '')} />

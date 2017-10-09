@@ -33,4 +33,11 @@ export default styled(Item)`
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.6);
   }
+  
+  a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
 `

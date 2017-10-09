@@ -6,27 +6,23 @@
     "autosize": "^4.0.0",
     "axios": "^0.16.2",
     "polished": "^1.3.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10",
-    "react-scroll": "^1.5.4",
-    "styled-components": "^2.1.1"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
+    "react-scroll": "^1.5.5",
+    "styled-components": "^2.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "pre-commit": "^1.2.2",
-    "standard": "^10.0.2"
+    "pre-commit": "^1.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/standard",
-    "lint-fix": "./node_modules/.bin/standard --fix"
-  },
-  "standard": {
-    "parser": "babel-eslint"
+    "lint": "yarn",
+    "lint-fix": "yarn"
   },
   "pre-commit": [
     "lint"

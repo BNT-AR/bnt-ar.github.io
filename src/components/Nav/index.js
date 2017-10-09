@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { animateScroll } from 'react-scroll'
 import Wrapper from './components/Wrapper'
 import Item from './components/Item'
+import {Link} from 'react-router-dom'
 
 class Nav extends Component {
   scrollTo = (nodeId) => {
     const element = document.getElementById(nodeId)
+    if (!element) return
+
     const windowOffsetTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0)
     const value = element.getBoundingClientRect().top + windowOffsetTop
     animateScroll.scrollTo(value, {
@@ -19,7 +22,9 @@ class Nav extends Component {
       return false
     }
     e.target.blur()
-    this.scrollTo('about')
+    setTimeout(() => {
+      this.scrollTo('about')
+    }, 50)
   }
 
   onTeamSelect = (e) => {
@@ -27,7 +32,17 @@ class Nav extends Component {
       return false
     }
     e.target.blur()
-    this.scrollTo('team')
+    setTimeout(() => {
+      this.scrollTo('team')
+    }, 50)
+  }
+
+  onFormSelect = (e) => {
+    if (e.type !== 'click' && e.charCode !== 13) {
+      return false
+    }
+    e.target.blur()
+    this.scrollTo('form')
   }
 
   onFormSelect = (e) => {
@@ -41,9 +56,15 @@ class Nav extends Component {
   render () {
     return (
       <div className={this.props.className}>
-        <Item onKeyPress={this.onAboutSelect} onClick={this.onAboutSelect}>About</Item>
-        <Item onKeyPress={this.onTeamSelect} onClick={this.onTeamSelect}>Team</Item>
-        <Item bordered onKeyPress={this.onFormSelect} onClick={this.onFormSelect}>Contact</Item>
+        <Item onKeyPress={this.onAboutSelect} onClick={this.onAboutSelect}>
+          <Link to={'/'}>About</Link>
+        </Item>
+        <Item onKeyPress={this.onTeamSelect} onClick={this.onTeamSelect}>
+          <Link to={'/'}>Team</Link>
+        </Item>
+        <Item bordered onKeyPress={this.onFormSelect} onClick={this.onFormSelect}>
+          Contact
+        </Item>
       </div>
     )
   }

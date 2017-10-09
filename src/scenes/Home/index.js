@@ -36,7 +36,7 @@ class Home extends Component {
               <br />
               {'Explore our approach and process to make apps comes true.'}
             </span>
-            )}
+          )}
           arrowToId={'about'}
         />
         <Story
@@ -86,6 +86,7 @@ class Home extends Component {
         />
         <Stack />
         <Team />
+
         <Footer />
       </div>
     )

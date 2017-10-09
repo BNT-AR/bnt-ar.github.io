@@ -63,7 +63,7 @@ class Stack extends Component {
             <Member
               image={this.pics['mateu']}
               name={'Emiliano Mateu'}
-              title={'Cutting Edge Front-end'}
+              title={'Cutting Edge Front End'}
               description={'Fedora Linux Lover'}
               linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
             />

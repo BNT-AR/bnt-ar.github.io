@@ -1,15 +1,10 @@
 import styled from 'styled-components'
-
 import { bp } from '../../../../styled'
-import H1 from '../../../H1'
 
 export default styled.div`
   position: relative;
+  min-height: 100vh;
   padding: 50px 0;
-
-  ${bp('ts', 'min-width', +1)`
-    text-align: center;
-  `}
   
   ${bp('ts')`
     max-width: 500px;
@@ -17,18 +12,11 @@ export default styled.div`
     padding: 0 30px;
   `}
   
-  ${H1} {
-    &:before {
-      ${bp('ts', 'min-width', +1)`
-        left: 35%;
-        width: 30%;
-      `}
-    }
-  }
-  
   .pure-g {
     max-width: 990px;
     margin: 0 auto;
+    
+    .pure-u-1 img { width: 100%; }
     
     ${bp('ts')`
       max-width: none;
@@ -40,6 +28,10 @@ export default styled.div`
     > div {
       box-sizing: border-box;
       padding: 15px;
+      text-align: left;
+      ${bp('md')`
+      `}      
     }
   }
+ }
 `
