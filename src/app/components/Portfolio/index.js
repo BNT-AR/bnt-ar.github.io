@@ -28,7 +28,7 @@ class Portfolio extends Component {
   render () {
     return (
       <Wrapper>
-        <div id={'portfolio'}>
+        <div>
           <div className='pure-g'>
             <div className='pure-u-2-3 pure-u-ts-1 pure-u-sm-1'>
               <div>
@@ -37,7 +37,6 @@ class Portfolio extends Component {
                 <P><Button href={this.props.url} className={'view-online'} target='_blank'>View online</Button></P>
               </div>
             </div>
-
             <div className='pure-u-1-3 pure-u-ts-1 pure-u-sm-1'>
               <Tech>
                 <H2>Featured tools</H2>

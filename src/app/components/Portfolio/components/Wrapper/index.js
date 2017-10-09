@@ -4,13 +4,11 @@ import { bp } from '../../../../../core/styled/helpers'
 export default styled.div`
   position: relative;
   min-height: 100vh;
-  padding: 50px 0;
+  padding: 50px;
   background: #fff;
 
-  ${bp('ts')`
-    max-width: 500px;
-    margin: 60px auto;
-    padding: 0 30px;
+  ${bp('md')`
+    padding: 30px;
   `}
 
   .pure-g {
@@ -32,6 +30,9 @@ export default styled.div`
       box-sizing: border-box;
       padding: 15px;
       text-align: left;
+      ${bp('ts')`
+        padding: 0 15px;
+      `}
     }
   }
 `
