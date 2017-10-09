@@ -22,7 +22,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "yarn",
-    "lint-fix": "yarn"
+    "lint-fix": "yarn",
+    "deploy": "./shell/deploy.sh"
   },
   "pre-commit": [
     "lint"
