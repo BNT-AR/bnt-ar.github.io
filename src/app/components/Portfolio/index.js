@@ -8,6 +8,18 @@ import Button from './components/Button'
 import List from './components/List'
 import Tech from './components/Tech'
 
+// TOOLS IMAGES
+import React2 from './../Stack/assets/react.svg'
+import Angular from './../Stack/assets/angular.svg'
+import Laravel from './../Stack/assets/laravel.svg'
+import Javascript from './../Stack/assets/javascript.svg'
+import MySQL from './../Stack/assets/mysql.svg'
+import PHP from './../Stack/assets/php.svg'
+import AWS from './../Stack/assets/aws-cloud.svg'
+import Envoyer from './../Stack/assets/envoyer.svg'
+import VueJS from './../Stack/assets/vuejs.svg'
+import Typescript from './../Stack/assets/typescript.svg'
+
 class Portfolio extends Component {
   static propTypes = {
     title: PropTypes.string,
@@ -23,6 +35,23 @@ class Portfolio extends Component {
     url: '',
     tools: [],
     images: []
+  }
+
+  constructor (props) {
+    super(props)
+
+    this.mapToolStringToIcon = {
+      'Laravel': Laravel,
+      'React': React2,
+      'Javascript': Javascript,
+      'PHP': PHP,
+      'MySQL': MySQL,
+      'AWS': AWS,
+      'VueJS': VueJS,
+      'Envoyer': Envoyer,
+      'Angular 4': Angular,
+      'Typescript': Typescript
+    }
   }
 
   render () {
@@ -44,7 +73,7 @@ class Portfolio extends Component {
                   {
                     this.props.tools.map((obj, i) => (
                       <li key={i}>
-                        <img src={obj.icon} alt={obj.name} />
+                        <img src={this.mapToolStringToIcon[obj.name]} alt={obj.name} />
                         <p>{obj.name}</p>
                       </li>
                     ))
@@ -54,7 +83,7 @@ class Portfolio extends Component {
             </div>
             <div className='pure-u-1 pure-u-ts-1 pure-u-sm-1 '>
               <div>
-                <img src={this.props.images[0].name} alt={this.props.images[0].alt} />
+                <img src={this.props.images} alt={this.props.title} />
               </div>
             </div>
           </div>
