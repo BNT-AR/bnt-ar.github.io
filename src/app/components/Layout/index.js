@@ -23,7 +23,8 @@ import Portfolio from '../../scenes/Portfolio'
 import { auth, unsetCurrentUser } from '../../../account/actions'
 import {
   AccountCreateScene, AccountLoginScene,
-  AccountForgotScene, AccountResetScene
+  AccountForgotScene, AccountResetScene,
+  AccountHashLoginScene
 } from '../../../account'
 
 injectGlobal`${global(classic)}` // eslint-disable-line
@@ -92,6 +93,7 @@ class Layout extends Component {
             <Route exact path={`/`} component={Home} />
             <Route exact path={`/portfolio`} component={Portfolio} />
             <Route exact path={`/account/login`} component={AccountLoginScene} />
+            <Route exact path={`/account/login/magic/:hash`} component={AccountHashLoginScene} />
             <Route exact path={`/account/create`} component={AccountCreateScene} />
             <Route exact path={`/account/forgot`} component={AccountForgotScene} />
             <Route exact path={`/account/reset/:token`} component={AccountResetScene} />

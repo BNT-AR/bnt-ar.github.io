@@ -193,3 +193,22 @@ export function authEmail (email, password) {
     }
   }
 }
+
+export function authHash (hash) {
+  return async dispatch => {
+    dispatch(authEmailRequest())
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/magic`, {hash})
+      if (response.data.token) {
+        dispatch(authEmailSuccess())
+        dispatch(setCurrentUser(response.data.token, response.data.user))
+      } else {
+        dispatch(unsetCurrentUser())
+        dispatch(authEmailFailure())
+      }
+    } catch (e) {
+      dispatch(unsetCurrentUser())
+      dispatch(authEmailFailure())
+    }
+  }
+}
