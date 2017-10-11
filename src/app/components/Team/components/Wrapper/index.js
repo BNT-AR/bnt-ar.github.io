@@ -4,19 +4,21 @@ import { bp } from '../../../../../core/styled/helpers'
 import H1 from '../../../H1'
 
 export default styled.div`
-  position: relative;
-  padding: 50px 0;
   background: #fff;
-
   ${bp('ts', 'min-width', +1)`
     text-align: center;
   `}
 
-  ${bp('ts')`
-    max-width: 500px;
-    margin: 60px auto;
-    padding: 0 30px;
-  `}
+  > div {
+    position: relative;
+    padding: 50px 0;
+
+    ${bp('ts')`
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 50px 30px;
+    `}
+  }
 
   ${H1 /* sc-sel */ } {
     &::before {

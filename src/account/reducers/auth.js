@@ -1,10 +1,9 @@
 import {
   AUTH_REQUEST, AUTH_SUCCESS, AUTH_FAILURE, AUTH_LOGOUT,
-  FETCH_ME_REQUEST, FETCH_ME_SUCCESS, FETCH_ME_FAILURE,
-  UPDATE_AUTH_USER_DATA
-} from './../actions'
+  FETCH_ME_REQUEST, FETCH_ME_SUCCESS, FETCH_ME_FAILURE
+} from './../actions/auth'
 
-export default function authCurrent (state = {
+export default function auth (state = {
   attempted: false,
   fetching: false,
   authenticated: false,
@@ -59,14 +58,6 @@ export default function authCurrent (state = {
       return {
         ...state,
         fetching: false
-      }
-    case UPDATE_AUTH_USER_DATA:
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          ...action.value
-        }
       }
     default:
       return state

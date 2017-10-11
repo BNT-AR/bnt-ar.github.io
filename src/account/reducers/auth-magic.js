@@ -1,26 +1,26 @@
 import {
-  AUTH_EMAIL_REQUEST, AUTH_EMAIL_SUCCESS, AUTH_EMAIL_FAILURE
-} from './../actions'
+  AUTH_MAGIC_REQUEST, AUTH_MAGIC_SUCCESS, AUTH_MAGIC_FAILURE
+} from './../actions/auth-magic'
 
-export default function authEmail (state = {
+export default function authMagic (state = {
   fetching: false,
   authenticated: false,
   failed: false
 }, action) {
   switch (action.type) {
-    case AUTH_EMAIL_REQUEST:
+    case AUTH_MAGIC_REQUEST:
       return {
         fetching: true,
         authenticated: false,
         failed: false
       }
-    case AUTH_EMAIL_SUCCESS:
+    case AUTH_MAGIC_SUCCESS:
       return {
         fetching: false,
         authenticated: true,
         failed: false
       }
-    case AUTH_EMAIL_FAILURE:
+    case AUTH_MAGIC_FAILURE:
       return {
         fetching: false,
         authenticated: false,

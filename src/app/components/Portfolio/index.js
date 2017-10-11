@@ -22,19 +22,11 @@ import Typescript from './../Stack/assets/typescript.svg'
 
 class Portfolio extends Component {
   static propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     description: PropTypes.string,
     url: PropTypes.string,
-    tools: PropTypes.array,
-    images: PropTypes.array
-  }
-
-  static defaultProps = {
-    title: '',
-    description: '',
-    url: '',
-    tools: [],
-    images: []
+    tools: PropTypes.array.isRequired,
+    images: PropTypes.string.isRequired
   }
 
   constructor (props) {
@@ -59,14 +51,22 @@ class Portfolio extends Component {
       <Wrapper>
         <div>
           <div className='pure-g'>
-            <div className='pure-u-2-3 pure-u-ts-1 pure-u-sm-1'>
+            <div className='pure-u-2-3 pure-u-ts-1'>
               <div>
                 <H1>{this.props.title}</H1>
-                <P>{this.props.description}</P>
-                <P><Button href={this.props.url} className={'view-online'} target='_blank'>View online</Button></P>
+                {this.props.description && (
+                  <P>{this.props.description}</P>
+                )}
+                {this.props.url && (
+                  <P>
+                    <Button href={this.props.url} target='_blank'>
+                      View online
+                    </Button>
+                  </P>
+                )}
               </div>
             </div>
-            <div className='pure-u-1-3 pure-u-ts-1 pure-u-sm-1'>
+            <div className='pure-u-1-3 pure-u-ts-1'>
               <Tech>
                 <H2>Featured tools</H2>
                 <List>
@@ -81,7 +81,7 @@ class Portfolio extends Component {
                 </List>
               </Tech>
             </div>
-            <div className='pure-u-1 pure-u-ts-1 pure-u-sm-1 '>
+            <div className='pure-u-1'>
               <div>
                 <img src={this.props.images} alt={this.props.title} />
               </div>

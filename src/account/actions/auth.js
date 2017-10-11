@@ -11,13 +11,9 @@ export const AUTH_REQUEST = 'AUTH_REQUEST'
 export const AUTH_SUCCESS = 'AUTH_SUCCESS'
 export const AUTH_FAILURE = 'AUTH_FAILURE'
 export const AUTH_LOGOUT = 'AUTH_LOGOUT'
-export const AUTH_EMAIL_REQUEST = 'AUTH_EMAIL_REQUEST'
-export const AUTH_EMAIL_SUCCESS = 'AUTH_EMAIL_SUCCESS'
-export const AUTH_EMAIL_FAILURE = 'AUTH_EMAIL_FAILURE'
 export const FETCH_ME_REQUEST = 'FETCH_ME_REQUEST'
 export const FETCH_ME_SUCCESS = 'FETCH_ME_SUCCESS'
 export const FETCH_ME_FAILURE = 'FETCH_ME_FAILURE'
-export const UPDATE_AUTH_USER_DATA = 'UPDATE_AUTH_USER_DATA'
 
 /*
  * action creators
@@ -64,24 +60,6 @@ function fetchMeSuccess (user) {
 function fetchMeFailure () {
   return {
     type: FETCH_ME_FAILURE
-  }
-}
-
-function authEmailRequest () {
-  return {
-    type: AUTH_EMAIL_REQUEST
-  }
-}
-
-function authEmailSuccess () {
-  return {
-    type: AUTH_EMAIL_SUCCESS
-  }
-}
-
-function authEmailFailure () {
-  return {
-    type: AUTH_EMAIL_FAILURE
   }
 }
 
@@ -171,44 +149,6 @@ export function auth () {
     } catch (e) {
       dispatch(unsetCurrentUser())
       dispatch(authFailure())
-    }
-  }
-}
-
-export function authEmail (email, password) {
-  return async dispatch => {
-    dispatch(authEmailRequest())
-    try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, { email, password })
-      if (response.data.token) {
-        dispatch(authEmailSuccess())
-        dispatch(setCurrentUser(response.data.token, response.data.user))
-      } else {
-        dispatch(unsetCurrentUser())
-        dispatch(authEmailFailure())
-      }
-    } catch (e) {
-      dispatch(unsetCurrentUser())
-      dispatch(authEmailFailure())
-    }
-  }
-}
-
-export function authHash (hash) {
-  return async dispatch => {
-    dispatch(authEmailRequest())
-    try {
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/magic`, {hash})
-      if (response.data.token) {
-        dispatch(authEmailSuccess())
-        dispatch(setCurrentUser(response.data.token, response.data.user))
-      } else {
-        dispatch(unsetCurrentUser())
-        dispatch(authEmailFailure())
-      }
-    } catch (e) {
-      dispatch(unsetCurrentUser())
-      dispatch(authEmailFailure())
     }
   }
 }

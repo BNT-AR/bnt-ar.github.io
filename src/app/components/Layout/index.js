@@ -21,11 +21,7 @@ import Portfolio from '../../scenes/Portfolio'
 
 // Account
 import { auth, unsetCurrentUser } from '../../../account/actions'
-import {
-  AccountCreateScene, AccountLoginScene,
-  AccountForgotScene, AccountResetScene,
-  AccountHashLoginScene
-} from '../../../account'
+import { AccountMagicScene } from '../../../account'
 
 injectGlobal`${global(classic)}` // eslint-disable-line
 
@@ -86,19 +82,17 @@ class Layout extends Component {
           </Helmet>
           <Header>
             <Logo />
-            <Nav />
+            <Nav auth={this.props.auth} />
           </Header>
 
-          <Switch>
-            <Route exact path={`/`} component={Home} />
-            <Route exact path={`/portfolio`} component={Portfolio} />
-            <Route exact path={`/account/login`} component={AccountLoginScene} />
-            <Route exact path={`/account/login/magic/:hash`} component={AccountHashLoginScene} />
-            <Route exact path={`/account/create`} component={AccountCreateScene} />
-            <Route exact path={`/account/forgot`} component={AccountForgotScene} />
-            <Route exact path={`/account/reset/:token`} component={AccountResetScene} />
-            <Route component={Home} />
-          </Switch>
+          { this.props.auth.attempted && (
+            <Switch>
+              <Route exact path={`/`} component={Home} />
+              <Route exact path={`/portfolio`} component={Portfolio} />
+              <Route exact path={`/account/magic/:hash`} component={AccountMagicScene} />
+              <Route component={Home} />
+            </Switch>
+          )}
 
           <Footer />
           <SplashScreen visible={!this.props.auth.attempted} />

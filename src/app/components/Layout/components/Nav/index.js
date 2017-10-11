@@ -7,12 +7,13 @@ import {Link} from 'react-router-dom'
 
 class Nav extends Component {
   static propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    auth: PropTypes.object.isRequired
   }
 
   scrollTo = (nodeId) => {
     const element = document.getElementById(nodeId)
-    if (!element) return
+    if (!element) return false
 
     const windowOffsetTop = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0)
     const value = element.getBoundingClientRect().top + windowOffsetTop
@@ -20,6 +21,8 @@ class Nav extends Component {
       duration: 800,
       smooth: 'easeInOutCubic'
     })
+
+    return true
   }
 
   onAboutSelect = (e) => {
@@ -67,6 +70,11 @@ class Nav extends Component {
         <Item onKeyPress={this.onTeamSelect} onClick={this.onTeamSelect}>
           <Link to={'/'}>Team</Link>
         </Item>
+        {this.props.auth && this.props.auth.authenticated && (
+          <Item>
+            <Link to={'/portfolio'}>Portfolio</Link>
+          </Item>
+        )}
         <Item bordered onKeyPress={this.onFormSelect} onClick={this.onFormSelect}>
           Contact
         </Item>

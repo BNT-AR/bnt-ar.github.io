@@ -62,19 +62,6 @@ export default styled(Footer)`
     `}
   }
 
-  a {
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    transition: border-color 200ms ease;
-
-    &:hover,
-    &:focus {
-      border-bottom: 1px solid rgba(255, 255, 255, 1);
-    }
-  }
-
   @media screen and (max-width: 768px) {
     .hidden-form {
       display: none;

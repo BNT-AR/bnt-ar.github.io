@@ -26,65 +26,67 @@ class Stack extends Component {
   render () {
     return (
       <Wrapper id={'team'}>
-        <H1>We are a full stack team</H1>
-        <P>
-          We know about trust and synergic, those are key values to success.
-        </P>
+        <div>
+          <H1>We are a full stack team</H1>
+          <P>
+            We know about trust and synergic, those are key values to success.
+          </P>
 
-        <div className='pure-g'>
-          <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-            <Member
-              image={BNT}
-              name={'Brave New Technology'}
-              title={'Practical & Scalable Solutions'}
-              description={'Make apps comes true'}
-              linkedIn={'https://www.linkedin.com/company-beta/24781853/'}
-            />
-          </div>
-          <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-            <Member
-              image={this.pics['brunacci']}
-              name={'Gabriel Brunacci'}
-              title={'Founder & Director'}
-              description={'Tech and code geek'}
-              linkedIn={'https://www.linkedin.com/in/gabrielbrunacci/'}
-            />
-          </div>
-          <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-            <Member
-              image={this.pics['bilbao']}
-              name={'Martín Bilbao'}
-              title={'Software Engineer Hero'}
-              description={'Algorithms in his blood'}
-              linkedIn={'https://www.linkedin.com/in/martin-bilbao-51a5b31b/'}
-            />
-          </div>
-          <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-            <Member
-              image={this.pics['mateu']}
-              name={'Emiliano Mateu'}
-              title={'Cutting Edge Front End'}
-              description={'Fedora Linux Lover'}
-              linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
-            />
-          </div>
-          <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-            <Member
-              image={this.pics['sette']}
-              name={'Juan Settecase'}
-              title={'Grandmaster Laravel'}
-              description={'The Bug Slayer'}
-              linkedIn={'https://www.linkedin.com/in/juan-ignacio-settecase/'}
-            />
-          </div>
-          <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-            <Member
-              image={this.pics['dans']}
-              name={'Juan Dans'}
-              title={'React.js Rockstar'}
-              description={'Office greatest Shazam'}
-              linkedIn={'https://www.linkedin.com/in/juan-bautista-dans-29a36ab4/'}
-            />
+          <div className='pure-g'>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={BNT}
+                name={'Brave New Technology'}
+                title={'Practical & Scalable Solutions'}
+                description={'Make apps comes true'}
+                linkedIn={'https://www.linkedin.com/company-beta/24781853/'}
+              />
+            </div>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={this.pics['brunacci']}
+                name={'Gabriel Brunacci'}
+                title={'Founder & Director'}
+                description={'Tech and code geek'}
+                linkedIn={'https://www.linkedin.com/in/gabrielbrunacci/'}
+              />
+            </div>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={this.pics['bilbao']}
+                name={'Martín Bilbao'}
+                title={'Software Engineer Hero'}
+                description={'Algorithms in his blood'}
+                linkedIn={'https://www.linkedin.com/in/martin-bilbao-51a5b31b/'}
+              />
+            </div>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={this.pics['mateu']}
+                name={'Emiliano Mateu'}
+                title={'Cutting Edge Front End'}
+                description={'Fedora Linux Lover'}
+                linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
+              />
+            </div>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={this.pics['sette']}
+                name={'Juan Settecase'}
+                title={'Grandmaster Laravel'}
+                description={'The Bug Slayer'}
+                linkedIn={'https://www.linkedin.com/in/juan-ignacio-settecase/'}
+              />
+            </div>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={this.pics['dans']}
+                name={'Juan Dans'}
+                title={'React.js Rockstar'}
+                description={'Office greatest Shazam'}
+                linkedIn={'https://www.linkedin.com/in/juan-bautista-dans-29a36ab4/'}
+              />
+            </div>
           </div>
         </div>
       </Wrapper>

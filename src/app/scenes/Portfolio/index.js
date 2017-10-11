@@ -1,24 +1,29 @@
 import React, { Component } from 'react'
-import Portfolio from './../../components/Portfolio'
-import Hero from '../../components/Hero'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
+import styled from 'styled-components'
 import axios from 'axios'
 
-// MARKETPLACE IMAGES
+import Portfolio from './../../components/Portfolio'
+import Hero from '../../components/Hero'
+
 import Marketplace from './../../components/Portfolio/assets/marketplace.jpg'
-
-// HUBHAUS IMAGES
 import HubHaus from './../../components/Portfolio/assets/hubhaus.jpg'
-
-// DS
 import DS from './../../components/Portfolio/assets/dronestock.jpg'
-
-// BC
 import BC from './../../components/Portfolio/assets/birth.jpg'
-
-// ACR
 import ACR from './../../components/Portfolio/assets/acr.jpg'
 
+const Wrapper = styled.div`
+  min-height: 100px;
+`
+
 class PortfolioScene extends Component {
+  static propTypes = {
+    auth: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
+
   constructor (props) {
     super(props)
     this.state = {
@@ -44,12 +49,15 @@ class PortfolioScene extends Component {
   }
 
   componentWillMount () {
+    if (!this.props.auth.authenticated) { // can't access if user is not logged in
+      this.props.history.replace('/')
+    }
     this.fetchData()
   }
 
   render () {
     return (
-      <div>
+      <Wrapper>
         <Hero
           title={'Apps Portfolio'}
           legend={'We love what we do and that\'s why we do it. Below you will find a few examples why.'}
@@ -57,7 +65,7 @@ class PortfolioScene extends Component {
         />
         <div id='portfolio'>
           {
-            this.state.portfolioCollection ? this.state.portfolioCollection.map((obj, i) => (
+            this.state.portfolioCollection && this.state.portfolioCollection.map((obj, i) => (
               <Portfolio key={obj.id}
                 title={obj.title}
                 description={obj.description}
@@ -65,12 +73,26 @@ class PortfolioScene extends Component {
                 tools={obj.tools}
                 images={this.mapImageStringToIcon[obj.images]}
               />
-            )) : null
+            ))
           }
         </div>
-      </div>
+      </Wrapper>
     )
   }
 }
 
-export default PortfolioScene
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth.current
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+  }
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PortfolioScene))
