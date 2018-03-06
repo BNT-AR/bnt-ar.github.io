@@ -64,8 +64,9 @@ export default styled.div`
   }
 
   textarea {
+    overflow: hidden;
     resize: none;
-    transition: height 1s ease;
+    transition: height 200ms ease;
   }
 
   input {
