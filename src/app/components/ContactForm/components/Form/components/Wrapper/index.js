@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import imgError from './error.svg'
+import { bp } from '../../../../../../../core/styled/helpers'
 
 export default styled.div`
+  margin-top: 15px;
+
   .showMessage {
-    color: #fff;
     transform: transition 4s all;
   }
 
@@ -14,8 +16,12 @@ export default styled.div`
   .errorIcon {
     background-image: url('${imgError}');
     background-repeat: no-repeat;
-    background-position: 310px 8px;
     background-size: 15px;
+    background-position: 165px;
+
+    ${bp('md')`
+      background-position: 95%;
+    `}
   }
 
   input,
@@ -24,43 +30,25 @@ export default styled.div`
     font-family: 'calluna-sans', 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     display: block;
+    box-shadow: 0 0 2px black;
   }
 
   input,
   textarea {
-    width: 98%;
+    width: 95%;
     border: 0;
-    border-radius: 2px;
-    padding-left: 2%;
+    padding-left: 3%;
     padding-right: 0;
     padding-bottom: 0;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    background-color: inherit;
-    color: #fff;
+    background-color: #fff;
     height: 30px;
     transition: border-color 400ms ease-in-out;
 
-    &:focus {
-      outline: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 1);
-    }
-
-    &::-webkit-input-placeholder {
-      color: #fff;
-    }
-
-    &::-moz-placeholder {
-      color: #fff;
-    }
-
-    &::-moz-placeholder {
-      color: #fff;
-    }
-
-    &::-ms-input-placeholder {
-      color: #fff;
-    }
+    ${bp('md')`
+      width: 93%;
+      margin: 10px;
+    `}
   }
 
   textarea {
@@ -70,7 +58,7 @@ export default styled.div`
   }
 
   input {
-    padding-bottom: 2%;
+    padding-bottom: 3%;
   }
 
   button {
@@ -80,10 +68,14 @@ export default styled.div`
     font-size: 14px;
     background-color: #196e8e;
     color: #fff;
-    margin: 20px auto 0;
-    width: 50%;
+    width: 98%;
     cursor: pointer;
     transition: all 400ms ease-in-out;
+
+    ${bp('md')`
+      width: 95%;
+      margin: 10px;
+    `}
 
     &:hover,
     &:active,

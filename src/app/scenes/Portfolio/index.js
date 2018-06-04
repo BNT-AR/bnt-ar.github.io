@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import Portfolio from './../../components/Portfolio'
 import Hero from '../../components/Hero'
+import ContactForm from '../../components/ContactForm'
 
 import Marketplace from './../../components/Portfolio/assets/marketplace.jpg'
 import HubHaus from './../../components/Portfolio/assets/hubhaus.jpg'
@@ -75,6 +76,9 @@ class PortfolioScene extends Component {
               />
             ))
           }
+        </div>
+        <div>
+          <ContactForm />
         </div>
       </Wrapper>
     )

@@ -53,14 +53,6 @@ class Nav extends Component {
     this.scrollTo('form')
   }
 
-  onFormSelect = (e) => {
-    if (e.type !== 'click' && e.charCode !== 13) {
-      return false
-    }
-    e.target.blur()
-    this.scrollTo('form')
-  }
-
   render () {
     return (
       <div className={this.props.className}>

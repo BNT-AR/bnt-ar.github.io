@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-
-import { bp } from '../../../../../core/styled/helpers'
-import H1 from '../../../H1'
+import H1 from '../../../../../../components/H1'
+import { bp } from '../../../../../../../core/styled/helpers'
 
 export default styled.div`
   background: #fff;

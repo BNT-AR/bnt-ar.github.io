@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import H1 from '../H1'
-import P from '../P'
+import H1 from '../../../../components/H1'
+import P from '../../../../components/P'
 import Wrapper from './components/Wrapper'
 import Member from './components/Member'
 

@@ -2,26 +2,33 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Logo from '../Logo'
-import Form from './components/Form'
+import github from './assets/github.svg'
+import linkedin from './assets/linkedin.svg'
 import Nav from '../Nav'
 import Info from './components/Info'
+import Social from './components/Social'
 import { clearFix } from 'polished'
 import { bp } from '../../../../../core/styled/helpers'
 
 const Footer = (props) => (
   <div className={props.className}>
     <div className='pure-g'>
-      <div className='pure-u-1-3 pure-u-ts-1 pure-u-md-1-2'>
+      <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-md-1-2'>
         <Logo />
       </div>
-      <div id='form' className='pure-u-1-3 pure-u-ts-1-3 hidden-form'>
-        <Form />
-      </div>
-      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-2'>
+      <div className='pure-u-2-3 pure-u-ts-1-2 pure-u-md-1-2'>
         <Info>
           <div><a href='mailto:info@bravenew.tech'>info@bravenew.tech</a></div>
           <div><a href='tel:+16464800357'>+1 (646) 480 0357</a></div>
           <div>Niceto Vega 4736, Buenos Aires</div>
+          <Social>
+            <a rel='noopener noreferrer' href='https://github.com/BNT-AR' target='_blank'>
+              <img src={github} alt='' />
+            </a>
+            <a rel='noopener noreferrer' href='https://www.linkedin.com/company/brave-new-technology/' target='_blank'>
+              <img src={linkedin} alt='' />
+            </a>
+          </Social>
         </Info>
       </div>
     </div>
@@ -34,7 +41,7 @@ Footer.propTypes = {
 
 export default styled(Footer)`
   position: relative;
-  padding: 50px 30px;
+  padding: 40px 30px;
   background: #26a6d6;
 
   ${bp('sm')`
@@ -42,7 +49,7 @@ export default styled(Footer)`
   `}
 
   > div {
-    max-width: 1000px;
+    max-width: 950px;
     margin: 0 auto;
     ${clearFix()}
   }

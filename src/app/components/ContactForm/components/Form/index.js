@@ -9,11 +9,9 @@ class Form extends Component {
     this.state = {
       name: '',
       email: '',
-      message: '',
       showForm: false,
       errorName: false,
       errorEmail: false,
-      errorMessage: false,
       submitting: false
     }
   }
@@ -42,26 +40,14 @@ class Form extends Component {
     }
   }
 
-  messageChange = (e) => {
-    this.setState({message: e.target.value})
-    if (!e.target.value) {
-      this.setState({errorMessage: true})
-    } else {
-      this.setState({errorMessage: false})
-    }
-  }
-
   submit = (e) => {
     e.preventDefault()
-
-    // changes the content of the button from 'Submit' to 'Sending'
-    this.setState({submitting: true})
 
     //  email validation
     const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.state.email)
 
     //  empty fields validations
-    if (!this.state.name) {
+    if (!this.state.name || this.state.name.length < 1) {
       this.setState({errorName: true})
     } else {
       this.setState({errorName: false})
@@ -71,21 +57,17 @@ class Form extends Component {
     } else {
       this.setState({errorEmail: false})
     }
-    if (!this.state.message) {
-      this.setState({errorMessage: true})
-    } else {
-      this.setState({errorMessage: false})
-    }
 
-    if (!this.state.name || !this.state.email || !this.state.message || !validEmail) {
-      this.setState({submitting: false})
+    if (!this.state.name || !this.state.email || !validEmail) {
       return false
     }
 
+    // changes the content of the button from 'Submit' to 'Sending'
+    this.setState({submitting: true})
+
     const data = {
       name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
+      email: this.state.email
     }
 
     axios({ method: 'post', url: process.env.REACT_APP_API_URL + '/contact', data })
@@ -116,28 +98,32 @@ class Form extends Component {
             </p>
           </div>
         ) : (
-          <form onSubmit={this.submit} noValidate>
-            <input
-              type='text'
-              placeholder='Your name'
-              defaultValue={this.state.name}
-              onChange={this.nameChange}
-              className={(this.state.errorName ? 'errorIcon' : '')} />
-            <input
-              type='email'
-              placeholder='example@email.com'
-              defaultValue={this.state.email}
-              onChange={this.emailChange}
-              className={(this.state.errorEmail ? 'errorIcon' : '')} />
-            <textarea
-              id={'messageArea'}
-              placeholder='Drop us a line'
-              defaultValue={this.state.message}
-              onChange={this.messageChange}
-              className={(this.state.errorMessage ? 'errorIcon' : '')} />
-            <button type='submit'>
-              {this.state.submitting ? 'Sending...' : 'Submit'}
-            </button>
+          <form onSubmit={this.submit} id='form'>
+            <div className='pure-g'>
+              <div className='pure-u-1-3 pure-u-md-1'>
+                <input
+                  type='text'
+                  placeholder='Your name'
+                  defaultValue={this.state.name}
+                  onChange={this.nameChange}
+                  className={(this.state.errorName ? 'errorIcon' : '')}
+                />
+              </div>
+              <div className='pure-u-1-3 pure-u-md-1'>
+                <input
+                  type='email'
+                  placeholder='example@email.com'
+                  defaultValue={this.state.email}
+                  onChange={this.emailChange}
+                  className={(this.state.errorEmail ? 'errorIcon' : '')}
+                />
+              </div>
+              <div className='pure-u-1-3 pure-u-md-1'>
+                <button type='submit'>
+                  {this.state.submitting ? 'Sending...' : 'Contact now!'}
+                </button>
+              </div>
+            </div>
           </form>
         )}
       </Wrapper>

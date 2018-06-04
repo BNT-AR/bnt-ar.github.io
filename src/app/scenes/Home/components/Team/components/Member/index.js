@@ -6,7 +6,7 @@ import Description from './components/Description'
 import LinkedInLogo from '../../assets/linkedin.svg'
 
 const Member = ({className, linkedIn, image, name, title, description}) => (
-  <a className={className} href={linkedIn} target='blank'>
+  <a className={className} href={linkedIn} target='_blank'>
     <Picture image={image} />
     <Description>
       <span>{ name }</span>

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import Hero from '../../components/Hero'
 import Story from '../../components/Story'
 import Stack from '../../components/Stack'
-import Team from '../../components/Team'
+import Team from './components/Team'
+import ContactForm from '../../components/ContactForm'
 import LaravelLogo from './assets/laravel-logo.svg'
 import ReactLogo from './assets/react-logo.svg'
 import AwsLogo from './assets/aws.svg'
@@ -78,6 +79,7 @@ class Home extends Component {
         />
         <Stack />
         <Team />
+        <ContactForm />
       </div>
     )
   }
