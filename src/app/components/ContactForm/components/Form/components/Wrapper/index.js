@@ -58,7 +58,7 @@ export default styled.div`
   }
 
   input {
-    padding-bottom: 3%;
+    padding-bottom: 7px;
   }
 
   button {
