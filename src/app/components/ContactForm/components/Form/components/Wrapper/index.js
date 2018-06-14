@@ -28,18 +28,15 @@ export default styled.div`
   textarea,
   button {
     font-family: 'calluna-sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     display: block;
     box-shadow: 0 0 2px black;
   }
 
   input,
   textarea {
-    width: 95%;
+    width: 85%;
     border: 0;
-    padding-left: 3%;
-    padding-right: 0;
-    padding-bottom: 0;
     margin-bottom: 20px;
     background-color: #fff;
     height: 30px;
@@ -48,6 +45,10 @@ export default styled.div`
     ${bp('md')`
       width: 93%;
       margin: 10px;
+    `}
+
+    ${bp('sm')`
+      width: 91%;
     `}
   }
 
@@ -58,14 +59,13 @@ export default styled.div`
   }
 
   input {
-    padding-bottom: 7px;
+    padding: 5px 10px;
   }
 
   button {
     border: 2px solid #196e8e;
     padding: 8px 15px;
     text-align: center;
-    font-size: 14px;
     background-color: #196e8e;
     color: #fff;
     width: 98%;

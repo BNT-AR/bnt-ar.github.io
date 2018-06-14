@@ -47,7 +47,7 @@ export default styled(Footer)`
   background: #26a6d6;
 
   ${bp('sm')`
-    height: 300px;
+    height: 160px;
     text-align: center;
   `}
 
