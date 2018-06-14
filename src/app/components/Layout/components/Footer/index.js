@@ -13,22 +13,24 @@ import { bp } from '../../../../../core/styled/helpers'
 const Footer = (props) => (
   <div className={props.className}>
     <div className='pure-g'>
-      <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-md-1-2'>
+      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-3'>
         <Logo />
       </div>
-      <div className='pure-u-2-3 pure-u-ts-1-2 pure-u-md-1-2'>
+      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-3'>
+        <Social>
+          <a rel='noopener noreferrer' href='https://github.com/BNT-AR' target='_blank'>
+            <img src={github} alt='' />
+          </a>
+          <a rel='noopener noreferrer' href='https://www.linkedin.com/company/brave-new-technology/' target='_blank'>
+            <img src={linkedin} alt='' />
+          </a>
+        </Social>
+      </div>
+      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-3'>
         <Info>
           <div><a href='mailto:info@bravenew.tech'>info@bravenew.tech</a></div>
           <div><a href='tel:+16464800357'>+1 (646) 480 0357</a></div>
           <div>Niceto Vega 4736, Buenos Aires</div>
-          <Social>
-            <a rel='noopener noreferrer' href='https://github.com/BNT-AR' target='_blank'>
-              <img src={github} alt='' />
-            </a>
-            <a rel='noopener noreferrer' href='https://www.linkedin.com/company/brave-new-technology/' target='_blank'>
-              <img src={linkedin} alt='' />
-            </a>
-          </Social>
         </Info>
       </div>
     </div>
@@ -41,10 +43,11 @@ Footer.propTypes = {
 
 export default styled(Footer)`
   position: relative;
-  padding: 40px 30px;
+  padding: 15px 30px;
   background: #26a6d6;
 
   ${bp('sm')`
+    height: 300px;
     text-align: center;
   `}
 
@@ -55,7 +58,10 @@ export default styled(Footer)`
   }
 
   ${Logo /* sc-sel */ } {
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
   }
 
   ${Nav /* sc-sel */ } {
