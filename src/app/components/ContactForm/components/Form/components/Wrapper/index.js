@@ -69,11 +69,12 @@ export default styled.div`
     background-color: #196e8e;
     color: #fff;
     width: 98%;
+    height: 38px;
     cursor: pointer;
     transition: all 400ms ease-in-out;
 
     ${bp('md')`
-      width: 95%;
+      width: 96%;
       margin: 10px;
     `}
 
