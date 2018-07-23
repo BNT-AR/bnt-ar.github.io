@@ -1,11 +1,15 @@
 import styled from 'styled-components'
+import { bp } from '../../../../../../../core/styled/helpers'
 
 export default styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  flex-direction: column;
+
+  ${bp('sm')`
+    flex-direction: column;
+  `}
 
   > a {
     cursor: pointer;

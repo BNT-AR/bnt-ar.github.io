@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Wrapper from './../Form/components/Wrapper'
+import ErrorName from './components/ErrorName'
 import axios from 'axios'
 import autosize from 'autosize'
 
@@ -101,6 +102,11 @@ class Form extends Component {
           <form onSubmit={this.submit} id='form'>
             <div className='pure-g'>
               <div className='pure-u-1-3 pure-u-md-1'>
+                <ErrorName
+                  visible={this.state.errorName}
+                >
+                  name is required
+                </ErrorName>
                 <input
                   type='text'
                   placeholder='Your name'
@@ -110,6 +116,11 @@ class Form extends Component {
                 />
               </div>
               <div className='pure-u-1-3 pure-u-md-1'>
+                <ErrorName
+                  visible={this.state.errorEmail}
+                >
+                  email is required
+                </ErrorName>
                 <input
                   type='email'
                   placeholder='example@email.com'

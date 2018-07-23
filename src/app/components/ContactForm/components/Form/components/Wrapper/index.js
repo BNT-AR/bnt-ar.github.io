@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import imgError from './error.svg'
+import imgError from './warning.svg'
 import { bp } from '../../../../../../../core/styled/helpers'
 
 export default styled.div`
@@ -86,5 +86,9 @@ export default styled.div`
       color: #fff;
       outline: unset;
     }
+  }
+
+  form > div > div {
+    position: relative;
   }
 `
