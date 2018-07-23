@@ -13,10 +13,10 @@ import { bp } from '../../../../../core/styled/helpers'
 const Footer = (props) => (
   <div className={props.className}>
     <div className='pure-g'>
-      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-3'>
+      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-2-5'>
         <Logo />
       </div>
-      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-3'>
+      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-5'>
         <Social>
           <a rel='noopener noreferrer' href='https://github.com/BNT-AR' target='_blank'>
             <img src={github} alt='' />
@@ -26,7 +26,7 @@ const Footer = (props) => (
           </a>
         </Social>
       </div>
-      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-1-3'>
+      <div className='pure-u-1-3 pure-u-ts-1-3 pure-u-md-2-5'>
         <Info>
           <div><a href='mailto:info@bravenew.tech'>info@bravenew.tech</a></div>
           <div><a href='tel:+16464800357'>+1 (646) 480 0357</a></div>
@@ -43,7 +43,7 @@ Footer.propTypes = {
 
 export default styled(Footer)`
   position: relative;
-  padding: 15px 30px;
+  padding: 15px 10px;
   background: #26a6d6;
 
   ${bp('sm')`

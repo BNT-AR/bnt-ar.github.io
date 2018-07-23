@@ -5,6 +5,7 @@ export default styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  flex-direction: column;
 
   > a {
     cursor: pointer;
