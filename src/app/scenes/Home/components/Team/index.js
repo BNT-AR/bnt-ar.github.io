@@ -6,7 +6,7 @@ import Member from './components/Member'
 
 import BNT from './assets/18.jpg'
 import relaxBilbao from './assets/36.jpg'
-import relaxMateu from './assets/35.jpg'
+import relaxVazquez from './assets/99.jpg'
 import relaxSette from './assets/24.jpg'
 import relaxDans from './assets/40.jpg'
 import relaxBrunacci from './assets/22.jpg'
@@ -16,7 +16,7 @@ class Stack extends Component {
     super(props)
     this.pics = {
       'bilbao': relaxBilbao,
-      'mateu': relaxMateu,
+      'vazquez': relaxVazquez,
       'sette': relaxSette,
       'dans': relaxDans,
       'brunacci': relaxBrunacci
@@ -54,19 +54,10 @@ class Stack extends Component {
             <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
               <Member
                 image={this.pics['bilbao']}
-                name={'Martín Bilbao'}
+                name={'Martin Bilbao'}
                 title={'Software Engineer Hero'}
                 description={'Algorithms in his blood'}
                 linkedIn={'https://www.linkedin.com/in/martin-bilbao-51a5b31b/'}
-              />
-            </div>
-            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
-              <Member
-                image={this.pics['mateu']}
-                name={'Emiliano Mateu'}
-                title={'Cutting Edge Front End'}
-                description={'Fedora Linux Lover'}
-                linkedIn={'https://www.linkedin.com/in/mateuemiliano/'}
               />
             </div>
             <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
@@ -83,8 +74,17 @@ class Stack extends Component {
                 image={this.pics['dans']}
                 name={'Juan Dans'}
                 title={'React.js Rockstar'}
-                description={'Office greatest Shazam'}
+                description={'Multi-core Brained'}
                 linkedIn={'https://www.linkedin.com/in/juan-bautista-dans-29a36ab4/'}
+              />
+            </div>
+            <div className='pure-u-1-3 pure-u-ts-1-2 pure-u-sm-1'>
+              <Member
+                image={this.pics['vazquez']}
+                name={'Joaquin Vazquez'}
+                title={'Front End Tank'}
+                description={"It's all about React.js, baby"}
+                linkedIn={'https://github.com/janva255'}
               />
             </div>
           </div>
