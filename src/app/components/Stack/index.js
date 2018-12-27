@@ -6,16 +6,12 @@ import Logo from './components/Logo'
 
 import LaravelLogo from './assets/laravel.svg'
 import ReactLogo from './assets/react.svg'
-import AngularLogo from './assets/angular.svg'
-import Vuejs from './assets/vuejs.svg'
 import JsLogo from './assets/javascript.svg'
-import NginxLogo from './assets/nginx.svg'
 import PhpLogo from './assets/php.svg'
 import NodeJsLogo from './assets/nodejs.svg'
 import Css3Logo from './assets/css3.svg'
 import AwsLogo from './assets/aws.svg'
 import MysqlLogo from './assets/mysql.svg'
-import MongoDbLogo from './assets/mongodb.svg'
 
 class Stack extends Component {
   render () {
@@ -34,16 +30,7 @@ class Stack extends Component {
             <Logo image={ReactLogo} title={'React & Native'} />
           </div>
           <div className='pure-u-1-4 pure-u-md-1-2'>
-            <Logo image={AngularLogo} title={'Angular'} />
-          </div>
-          <div className='pure-u-1-4 pure-u-md-1-2'>
-            <Logo image={Vuejs} title={'Vue.js'} />
-          </div>
-          <div className='pure-u-1-4 pure-u-md-1-2'>
             <Logo image={AwsLogo} title={'AWS'} />
-          </div>
-          <div className='pure-u-1-4 pure-u-md-1-2'>
-            <Logo image={NginxLogo} title={'Nginx'} />
           </div>
           <div className='pure-u-1-4 pure-u-md-1-2'>
             <Logo image={PhpLogo} title={'PHP'} />
@@ -59,9 +46,6 @@ class Stack extends Component {
           </div>
           <div className='pure-u-1-4 pure-u-md-1-2'>
             <Logo image={MysqlLogo} title={'MySQL'} />
-          </div>
-          <div className='pure-u-1-4 pure-u-md-1-2'>
-            <Logo image={MongoDbLogo} title={'MongoDB'} />
           </div>
         </div>
       </Wrapper>
