@@ -7,8 +7,7 @@ import {Link} from 'react-router-dom'
 
 class Nav extends Component {
   static propTypes = {
-    className: PropTypes.string,
-    auth: PropTypes.object.isRequired
+    className: PropTypes.string
   }
 
   scrollTo = (nodeId) => {
@@ -59,14 +58,6 @@ class Nav extends Component {
         <Item onKeyPress={this.onAboutSelect} onClick={this.onAboutSelect}>
           <Link to={'/'}>About</Link>
         </Item>
-        <Item onKeyPress={this.onTeamSelect} onClick={this.onTeamSelect}>
-          <Link to={'/'}>Team</Link>
-        </Item>
-        {this.props.auth && this.props.auth.authenticated && (
-          <Item>
-            <Link to={'/portfolio'}>Portfolio</Link>
-          </Item>
-        )}
         <Item bordered onKeyPress={this.onFormSelect} onClick={this.onFormSelect}>
           Contact
         </Item>

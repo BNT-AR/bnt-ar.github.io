@@ -5,7 +5,6 @@ import { intlShape, injectIntl } from 'react-intl'
 import { connect } from 'react-redux'
 import Helmet from 'react-helmet'
 import ReactGA from 'react-ga'
-import axios from 'axios'
 import { injectGlobal, ThemeProvider } from 'styled-components'
 import { global } from '../../../core/styled/helpers'
 import { classic } from '../../../core/styled/themes'
@@ -14,23 +13,15 @@ import Header from './components/Header'
 import Logo from './components/Logo'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import SplashScreen from './components/SplashScreen'
 
 import Home from '../../scenes/Home'
-import Portfolio from '../../scenes/Portfolio'
-
-// Account
-import { auth, unsetCurrentUser } from '../../../account/actions'
-import { AccountMagicScene } from '../../../account'
+// import Jobs1 from '../../scenes/Jobs/Jobs1'
 
 injectGlobal`${global(classic)}` // eslint-disable-line
 
 class Layout extends Component {
   static propTypes = {
     intl: intlShape.isRequired,
-    authenticate: PropTypes.func.isRequired,
-    logout: PropTypes.func.isRequired,
-    auth: PropTypes.object,
     location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
   }
@@ -48,29 +39,8 @@ class Layout extends Component {
     this.props.history.listen(location => this.logPageView(location.pathname))
   }
 
-  componentWillMount () {
-    this.props.authenticate()
-    axios.interceptors.response.use(res => {
-      if (res.data.action && res.data.action === 'logout') {
-        console.info('Intercepted => Logging Out')
-        this.props.logout()
-      }
-      return res
-    }, err => err)
-  }
-
   componentDidMount () {
     this.initializeReactGA()
-  }
-
-  componentWillReceiveProps (nextProps) {
-    if (this.props.auth.authenticated === nextProps.auth.authenticated) {
-      return false
-    }
-
-    if (!nextProps.auth.authenticated) {
-      this.props.history.push('/')
-    }
   }
 
   render () {
@@ -82,20 +52,16 @@ class Layout extends Component {
           </Helmet>
           <Header>
             <Logo />
-            <Nav auth={this.props.auth} />
+            <Nav />
           </Header>
 
-          { this.props.auth.attempted && (
-            <Switch>
-              <Route exact path={`/`} component={Home} />
-              <Route exact path={`/portfolio`} component={Portfolio} />
-              <Route exact path={`/account/magic/:hash`} component={AccountMagicScene} />
-              <Route component={Home} />
-            </Switch>
-          )}
+          <Switch>
+            <Route exact path={`/`} component={Home} />
+            {/* <Route exact path={`/jobs/fullstack-engineer-1`} component={Jobs1} /> */}
+            <Route component={Home} />
+          </Switch>
 
           <Footer />
-          <SplashScreen visible={!this.props.auth.attempted} />
         </div>
       </ThemeProvider>
     )
@@ -104,16 +70,12 @@ class Layout extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    lang: state.app.lang,
-    auth: state.auth.current
+    lang: state.app.lang
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    authenticate: () => dispatch(auth()),
-    logout: () => dispatch(unsetCurrentUser())
-  }
+const mapDispatchToProps = () => {
+  return {}
 }
 
 export default withRouter(connect(
