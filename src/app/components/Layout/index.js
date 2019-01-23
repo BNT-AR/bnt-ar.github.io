@@ -15,7 +15,6 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 
 import Home from '../../scenes/Home'
-// import Jobs1 from '../../scenes/Jobs/Jobs1'
 
 injectGlobal`${global(classic)}` // eslint-disable-line
 
@@ -57,7 +56,6 @@ class Layout extends Component {
 
           <Switch>
             <Route exact path={`/`} component={Home} />
-            {/* <Route exact path={`/jobs/fullstack-engineer-1`} component={Jobs1} /> */}
             <Route component={Home} />
           </Switch>
 
